@@ -1,0 +1,2548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmonaut Training | Sri Lankan Space Exploration Agency (SLSEA)</title>
+    <meta name="description" content="SLSEA's world-class cosmonaut training program - From selection to mission readiness. Train for space alongside international partners at our advanced facilities.">
+    <meta name="keywords" content="cosmonaut training, astronaut training, space training, SLSEA training, zero-g training, space medicine, mission specialist">
+    <meta name="author" content="Sri Lankan Space Exploration Agency">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <style>
+        /* ===== COSMONAUT TRAINING PAGE STYLES ===== */
+        
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #0099ff;
+            --accent-color: #00ccff;
+            --dark-blue: #003366;
+            --space-black: #0a0a1a;
+            --space-gray: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3d9ff;
+            --text-muted: #6699cc;
+            --glass-bg: rgba(26, 26, 46, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 16px rgba(0, 102, 204, 0.2);
+            --shadow-lg: 0 8px 32px rgba(0, 153, 255, 0.3);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+            --training-blue: #0066cc;
+            --medical-green: #00cc66;
+            --survival-orange: #ff9900;
+            --science-purple: #9966ff;
+            --international-gold: #ffcc00;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--space-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Animated Star Background */
+        .stars, .stars2, .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .stars {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.8"/></svg>') repeat;
+            animation: twinkle 100s linear infinite;
+        }
+
+        .stars2 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="0.8" fill="white" opacity="0.5"/></svg>') repeat;
+            animation: twinkle 150s linear infinite;
+        }
+
+        .stars3 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="1" fill="white" opacity="0.3"/></svg>') repeat;
+            animation: twinkle 200s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-1000px, -1000px); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(10, 10, 26, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .training-gradient {
+            background: linear-gradient(90deg, var(--training-blue), #00aaff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .international-gradient {
+            background: linear-gradient(90deg, var(--international-gold), #ff9900, #ff6600);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button.primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* Training Hero Section */
+        .training-hero {
+            padding: 10rem 20px 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .training-hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 102, 204, 0.2);
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .training-hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .training-hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .training-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .training-stat {
+            text-align: center;
+        }
+
+        .training-stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .training-stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 150px;
+        }
+
+        /* Section Common Styles */
+        section {
+            padding: 6rem 20px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Selection Process Section */
+        .selection-section {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 153, 255, 0.05));
+            border-top: 1px solid rgba(0, 102, 204, 0.2);
+            border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .selection-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .selection-process {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .selection-process::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), transparent);
+            z-index: 1;
+        }
+
+        .selection-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-content {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            flex: 1;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .step-content:hover {
+            transform: translateX(10px);
+            border-color: var(--primary-color);
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .step-duration {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: rgba(0, 102, 204, 0.1);
+            border: 1px solid rgba(0, 102, 204, 0.3);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .step-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .step-criteria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .criterion {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Training Modules Grid */
+        .training-modules {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .module-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            z-index: 1;
+            transition: left 0.7s ease;
+            pointer-events: none;
+            border-radius: var(--border-radius);
+        }
+
+        .module-card:hover::before {
+            left: 100%;
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .module-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .module-card.basic-training .module-icon {
+            background: linear-gradient(135deg, var(--training-blue), #00aaff);
+        }
+
+        .module-card.advanced-training .module-icon {
+            background: linear-gradient(135deg, var(--medical-green), #00ff99);
+        }
+
+        .module-card.specialized-training .module-icon {
+            background: linear-gradient(135deg, var(--survival-orange), #ffcc00);
+        }
+
+        .module-card.mission-specific .module-icon {
+            background: linear-gradient(135deg, var(--science-purple), #cc99ff);
+        }
+
+        .module-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-duration {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .module-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .module-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .topic {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Training Facilities Section */
+        .facilities-section {
+            background: linear-gradient(135deg, rgba(0, 204, 102, 0.1), rgba(0, 153, 51, 0.05));
+            border-top: 1px solid rgba(0, 204, 102, 0.2);
+            border-bottom: 1px solid rgba(0, 204, 102, 0.2);
+        }
+
+        .facilities-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .facility-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .facility-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: transform 0.5s ease;
+        }
+
+        .facility-card:hover::after {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .facility-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--medical-green), #00ff99);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .facility-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .facility-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* International Program Section */
+        .international-section {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(255, 153, 0, 0.05));
+            border-top: 1px solid rgba(255, 204, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 204, 0, 0.2);
+        }
+
+        .international-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .international-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .international-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(90deg, rgba(255, 204, 0, 0.2), rgba(255, 153, 0, 0.2));
+            border: 1px solid var(--international-gold);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--international-gold);
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 204, 0, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); }
+        }
+
+        .partner-countries {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .country-card {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 2px solid rgba(255, 204, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .country-card:hover {
+            transform: scale(1.1);
+            border-color: var(--international-gold);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+        }
+
+        .country-flag {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .country-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Space Professions Section */
+        .professions-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .professions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .profession-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .profession-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .profession-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profession-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--science-purple), #cc99ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .profession-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .profession-type {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .profession-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .profession-requirements {
+            margin-top: 1.5rem;
+        }
+
+        .requirement {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .requirement i {
+            color: var(--accent-color);
+        }
+
+        /* Training Timeline */
+        .timeline-section {
+            background: linear-gradient(135deg, rgba(102, 0, 204, 0.1), rgba(153, 51, 255, 0.05));
+            border-top: 1px solid rgba(102, 0, 204, 0.2);
+            border-bottom: 1px solid rgba(102, 0, 204, 0.2);
+        }
+
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 4rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--science-purple), transparent);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 30px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 30px;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: var(--science-purple);
+        }
+
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--science-purple), #cc99ff);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(153, 102, 255, 0.5);
+        }
+
+        .timeline-phase {
+            font-size: 1.2rem;
+            color: var(--science-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-duration {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Application Process */
+        .application-section {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .application-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .application-step {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: left;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .application-step:hover {
+            transform: translateX(5px);
+            border-color: var(--accent-color);
+        }
+
+        .step-index {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Training Calendar */
+        .calendar-section {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1), rgba(255, 153, 0, 0.05));
+            border-top: 1px solid rgba(255, 102, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .calendar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .calendar-event {
+            background: var(--glass-bg);
+            border: 1px solid rgba(255, 102, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .calendar-event:hover {
+            transform: translateY(-5px);
+            border-color: var(--survival-orange);
+            box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2);
+        }
+
+        .event-date {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 102, 0, 0.1);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--survival-orange);
+            margin-bottom: 1rem;
+        }
+
+        .event-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--space-gray);
+            border-top: 1px solid rgba(0, 102, 204, 0.3);
+            padding: 4rem 20px 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .footer-mission {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .link-column {
+            min-width: 150px;
+        }
+
+        .link-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .address {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .training-hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(10, 10, 26, 0.95);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid var(--glass-border);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .training-hero {
+                padding: 8rem 20px 4rem;
+            }
+            
+            .training-hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .training-hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .selection-process::before {
+                left: 20px;
+            }
+            
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .modules-grid, .facilities-grid, .professions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partner-countries {
+                gap: 1rem;
+            }
+            
+            .country-card {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .footer-main {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .training-hero-title {
+                font-size: 2rem;
+            }
+            
+            .training-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .step-content {
+                padding: 1.5rem;
+            }
+            
+            .module-card {
+                padding: 1.5rem;
+            }
+            
+            .application-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .country-card {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .country-flag {
+                font-size: 2rem;
+            }
+        }
+
+        /* Floating Astronaut Animation */
+        .astronaut-float {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at center, rgba(0, 102, 204, 0.2), transparent);
+            top: 100px;
+            right: 100px;
+            opacity: 0.3;
+            filter: blur(20px);
+            animation: float-astronaut 20s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .astronaut-float-2 {
+            width: 100px;
+            height: 100px;
+            top: 300px;
+            left: 50px;
+            animation: float-astronaut 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float-astronaut {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(50px, 30px) rotate(120deg); }
+            66% { transform: translate(-30px, 50px) rotate(240deg); }
+        }
+
+        /* Training Progress Bar */
+        .progress-container {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 5px;
+            transition: width 1s ease;
+        }
+
+        /* Training Badges */
+        .training-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 102, 204, 0.1);
+            border: 1px solid rgba(0, 102, 204, 0.3);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Language Proficiency */
+        .language-levels {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .language-level {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .level-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .level-dot.active {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">SLSEA</span>
+                    <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="Home.html" class="nav-link">Home</a>
+                <a href="missions.html" class="nav-link">Missions</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="spaceport.html" class="nav-link">Spaceport</a>
+                <a href="training.html" class="nav-link active">Cosmonaut Training</a>
+                <a href="partnerships.html" class="nav-link">Partnerships</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Training Hero Section -->
+    <section class="training-hero">
+        <div class="astronaut-float"></div>
+        <div class="astronaut-float astronaut-float-2"></div>
+        
+        <div class="training-hero-badge">Applications Open for 2025 Class</div>
+        <h1 class="training-hero-title">
+            Cosmonaut <span class="training-gradient">Training Program</span>
+        </h1>
+        <p class="training-hero-subtitle">
+            Join the elite ranks of SLSEA cosmonauts through our comprehensive 3-year training program. 
+            From zero-gravity adaptation to lunar surface operations, we prepare humanity's next explorers.
+        </p>
+        
+        <div class="training-stats">
+            <div class="training-stat">
+                <div class="training-stat-number counter" data-target="3">0</div>
+                <div class="training-stat-label">Year Training Program</div>
+            </div>
+            <div class="training-stat">
+                <div class="training-stat-number counter" data-target="12">0</div>
+                <div class="training-stat-label">Current Trainees</div>
+            </div>
+            <div class="training-stat">
+                <div class="training-stat-number counter" data-target="85">0</div>
+                <div class="training-stat-label">Training Modules</div>
+            </div>
+            <div class="training-stat">
+                <div class="training-stat-number counter" data-target="15">0</div>
+                <div class="training-stat-label">International Partners</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection Process Section -->
+    <section class="selection-section">
+        <div class="selection-container">
+            <div class="section-header">
+                <h2 class="section-title">Selection <span class="gradient-text">Process</span></h2>
+                <p class="section-subtitle">The rigorous 9-month selection process identifies candidates with the right combination of skills, resilience, and adaptability.</p>
+            </div>
+            
+            <div class="selection-process">
+                <!-- Step 1 -->
+                <div class="selection-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Initial Application Review</h3>
+                        <div class="step-duration">Month 1-2</div>
+                        <p class="step-description">
+                            Comprehensive review of academic qualifications, professional experience, 
+                            and medical history. Only 5% of applicants proceed to next phase.
+                        </p>
+                        <div class="step-criteria">
+                            <span class="criterion">Bachelor's Degree in STEM</span>
+                            <span class="criterion">3+ Years Professional Experience</span>
+                            <span class="criterion">Medical Certification</span>
+                            <span class="criterion">Language Proficiency</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="selection-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Psychological & Medical Evaluation</h3>
+                        <div class="step-duration">Month 3-4</div>
+                        <p class="step-description">
+                            Intensive psychological testing, team dynamics assessment, and comprehensive 
+                            medical examination including stress testing and isolation tolerance.
+                        </p>
+                        <div class="step-criteria">
+                            <span class="criterion">Psychological Resilience</span>
+                            <span class="criterion">Team Compatibility</span>
+                            <span class="criterion">Medical Fitness Class I</span>
+                            <span class="criterion">Stress Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="selection-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Physical & Technical Testing</h3>
+                        <div class="step-duration">Month 5-7</div>
+                        <p class="step-description">
+                            Physical fitness testing, technical knowledge assessment, and basic 
+                            survival skills evaluation in simulated space environments.
+                        </p>
+                        <div class="step-criteria">
+                            <span class="criterion">Physical Fitness Test</span>
+                            <span class="criterion">Technical Competency</span>
+                            <span class="criterion">Survival Skills</span>
+                            <span class="criterion">Problem-Solving</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="selection-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Final Selection & Assignment</h3>
+                        <div class="step-duration">Month 8-9</div>
+                        <p class="step-description">
+                            Final interview panel with senior SLSEA officials, mission-specific 
+                            assignment, and commencement of formal training program.
+                        </p>
+                        <div class="step-criteria">
+                            <span class="criterion">Final Interview</span>
+                            <span class="criterion">Mission Assignment</span>
+                            <span class="criterion">Training Cohort Formation</span>
+                            <span class="criterion">Contract Signing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Modules Section -->
+    <section class="training-modules">
+        <div class="section-header">
+            <h2 class="section-title">Comprehensive <span class="training-gradient">Training Curriculum</span></h2>
+            <p class="section-subtitle">Our 3-year program is divided into four progressive phases, each building upon the previous to create fully qualified cosmonauts.</p>
+        </div>
+        
+        <div class="modules-grid">
+            <!-- Module 1 -->
+            <div class="module-card basic-training">
+                <div class="module-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="module-title">Basic Training</h3>
+                <div class="module-duration">
+                    <i class="far fa-calendar"></i> Year 1: Foundation Phase
+                </div>
+                <p class="module-description">
+                    Fundamental spaceflight principles, systems engineering, and basic 
+                    cosmonaut skills. Includes classroom instruction and initial simulations.
+                </p>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Training Progress</span>
+                        <span>100% Complete</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="module-topics">
+                    <span class="topic">Spacecraft Systems</span>
+                    <span class="topic">Orbital Mechanics</span>
+                    <span class="topic">Space Medicine Basics</span>
+                    <span class="topic">EVA Fundamentals</span>
+                    <span class="topic">Russian Language</span>
+                    <span class="topic">Survival Training</span>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="module-card advanced-training">
+                <div class="module-icon">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <h3 class="module-title">Advanced Training</h3>
+                <div class="module-duration">
+                    <i class="far fa-calendar"></i> Year 2: Specialization Phase
+                </div>
+                <p class="module-description">
+                    Mission-specific training, advanced EVA operations, and specialized 
+                    skill development based on assigned mission roles and objectives.
+                </p>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Training Progress</span>
+                        <span>65% Complete</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <div class="module-topics">
+                    <span class="topic">Advanced EVA</span>
+                    <span class="topic">Robotics Operations</span>
+                    <span class="topic">Medical Procedures</span>
+                    <span class="topic">Emergency Protocols</span>
+                    <span class="topic">Payload Operations</span>
+                    <span class="topic">International Protocols</span>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="module-card specialized-training">
+                <div class="module-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3 class="module-title">Specialized Training</h3>
+                <div class="module-duration">
+                    <i class="far fa-calendar"></i> Year 3: Mission-Specific Phase
+                </div>
+                <p class="module-description">
+                    Intensive mission simulation, crew coordination, and final preparation 
+                    for specific mission profiles including lunar and Mars mission training.
+                </p>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Training Progress</span>
+                        <span>Current Trainees: 30%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                </div>
+                
+                <div class="module-topics">
+                    <span class="topic">Lunar Surface Ops</span>
+                    <span class="topic">Mars Mission Prep</span>
+                    <span class="topic">Deep Space Navigation</span>
+                    <span class="topic">International Crew Integration</span>
+                    <span class="topic">Mission Simulation</span>
+                    <span class="topic">Public Engagement</span>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="module-card mission-specific">
+                <div class="module-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="module-title">Mission-Specific Training</h3>
+                <div class="module-duration">
+                    <i class="far fa-calendar"></i> Pre-Launch: 6 Months
+                </div>
+                <p class="module-description">
+                    Final mission preparation including spacecraft-specific training, 
+                    mission timeline rehearsals, and emergency scenario drills.
+                </p>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span">Next Mission Prep</span>
+                        <span">Launch: Q3 2025</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%"></div>
+                    </div>
+                </div>
+                
+                <div class="module-topics">
+                    <span class="topic">Spacecraft Systems</span>
+                    <span class="topic">Mission Timeline</span>
+                    <span class="topic">Emergency Drills</span>
+                    <span class="topic">Crew Coordination</span>
+                    <span class="topic">Launch Procedures</span>
+                    <span class="topic">Post-Mission Protocols</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Facilities Section -->
+    <section class="facilities-section">
+        <div class="facilities-container">
+            <div class="section-header">
+                <h2 class="section-title">World-Class <span style="color: var(--medical-green);">Training Facilities</span></h2>
+                <p class="section-subtitle">SLSEA operates some of the most advanced cosmonaut training facilities in the world, located at our Batticaloa Spaceport complex.</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3 class="facility-title">Neutral Buoyancy Laboratory</h3>
+                    <p class="facility-description">
+                        12-meter deep pool with full-scale space station modules for EVA training. 
+                        Simulates microgravity conditions for 6-hour training sessions.
+                    </p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="facility-title">TU22M-S1 Parabolic Flight</h3>
+                    <p class="facility-description">
+                        Modified supersonic bomber providing 25-second periods of microgravity 
+                        for adaptation training and short-duration experiment practice.
+                    </p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="facility-title">High-Altitude Survival Center</h3>
+                    <p class="facility-description">
+                        Simulated mountain and wilderness environments for survival training, 
+                        including water landings, extreme weather, and emergency procedures.
+                    </p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="facility-title">Centrifuge Complex</h3>
+                    <p class="facility-description">
+                        20-meter arm centrifuge capable of simulating launch and re-entry G-forces 
+                        up to 12G with variable acceleration profiles.
+                    </p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3 class="facility-title">Virtual Reality Mission Simulator</h3>
+                    <p class="facility-description">
+                        Full-immersion VR systems for lunar surface operations, Mars exploration, 
+                        and complex spacecraft docking procedures.
+                    </p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="facility-title">Space Medicine & Research Center</h3>
+                    <p class="facility-description">
+                        Advanced medical facility for physiological monitoring, countermeasure 
+                        development, and long-duration space health research.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <div class="section-header">
+                <h2 class="section-title">3-Year <span style="color: var(--science-purple);">Training Timeline</span></h2>
+                <p class="section-subtitle">The complete journey from candidate selection to mission-ready cosmonaut.</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Year 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">YEAR 1: Foundation</div>
+                        <div class="timeline-duration">Months 1-12</div>
+                        <p>Basic spaceflight principles, systems engineering, survival training, and physical conditioning. Introduction to spacecraft systems and orbital mechanics.</p>
+                        <div class="training-badge">
+                            <i class="fas fa-check"></i> Complete: 12 trainees
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Year 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">YEAR 2: Specialization</div>
+                        <div class="timeline-duration">Months 13-24</div>
+                        <p>Advanced EVA training, robotics operations, medical procedures, and mission-specific skill development. Crew resource management and international protocols.</p>
+                        <div class="training-badge">
+                            <i class="fas fa-spinner"></i> In Progress: 8 trainees
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Year 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">YEAR 3: Mission Preparation</div>
+                        <div class="timeline-duration">Months 25-36</div>
+                        <p>Intensive mission simulation, lunar/Mars surface ops, deep space navigation, and final mission assignment. International crew integration and public engagement training.</p>
+                        <div class="training-badge">
+                            <i class="fas fa-users"></i> Current: 4 trainees
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Program Section -->
+    <section class="international-section">
+        <div class="international-container">
+            <div class="international-header">
+                <div class="international-badge">Global Partnership Program</div>
+                <h2 class="section-title">International <span class="international-gradient">Training Collaboration</span></h2>
+                <p class="section-subtitle">
+                    SLSEA welcomes cosmonaut candidates from partner nations for joint training programs 
+                    and prepares our trainees for international mission assignments.
+                </p>
+            </div>
+            
+            <div class="partner-countries">
+                <div class="country-card">
+                    <div class="country-flag">🇺🇸</div>
+                    <div class="country-name">United States</div>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇷🇺</div>
+                    <div class="country-name">Russia</div>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇪🇺</div>
+                    <div class="country-name">European Union</div>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇯🇵</div>
+                    <div class="country-name">Japan</div>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇮🇳</div>
+                    <div class="country-name">India</div>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇦🇪</div>
+                    <div class="country-name">UAE</div>
+                </div>
+            </div>
+            
+            <div class="language-levels" style="justify-content: center; margin-top: 2rem;">
+                <div class="language-level">
+                    <span style="color: var(--text-secondary); margin-right: 0.5rem;">Language Requirements:</span>
+                    <div class="level-dot active"></div>
+                    <div class="level-dot active"></div>
+                    <div class="level-dot active"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <span style="color: var(--text-secondary); margin-left: 0.5rem;">English</span>
+                </div>
+                
+                <div class="language-level">
+                    <div class="level-dot active"></div>
+                    <div class="level-dot active"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <span style="color: var(--text-secondary); margin-left: 0.5rem;">Russian</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Professions Section -->
+    <section class="professions-section">
+        <div class="section-header">
+            <h2 class="section-title">Space <span style="color: var(--science-purple);">Career Paths</span></h2>
+            <p class="section-subtitle">
+                Beyond cosmonauts, SLSEA trains specialists in various space-related professions 
+                essential for mission success and space exploration advancement.
+            </p>
+        </div>
+        
+        <div class="professions-grid">
+            <!-- Profession 1 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">Flight Surgeon</h3>
+                        <div class="profession-type">Medical Specialist</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Medical doctors specialized in astronaut health, space medicine, 
+                    and physiological adaptation to microgravity environments.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Medical Degree + Aerospace Medicine Fellowship</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>5 Years Minimum Experience</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profession 2 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">Mission Specialist</h3>
+                        <div class="profession-type">Scientific Operations</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Scientists and engineers responsible for specific mission payloads, 
+                    experiments, and specialized equipment operations.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>PhD in Relevant Scientific Field</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>Research Experience Required</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profession 3 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">Payload Officer</h3>
+                        <div class="profession-type">Technical Operations</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Engineers specializing in spacecraft systems, payload integration, 
+                    and in-orbit operations of scientific and commercial equipment.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Engineering Degree + Systems Certification</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>3 Years Systems Experience</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profession 4 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">CAPCOM</h3>
+                        <div class="profession-type">Mission Communications</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Capsule Communicator - The primary voice link between Mission Control 
+                    and spacecraft crew during missions.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>STEM Degree + Communication Training</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>2 Years Mission Operations Experience</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profession 5 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">Robotics Operator</h3>
+                        <div class="profession-type">Remote Operations</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Specialists in remote manipulation systems, robotic arms, and 
+                    autonomous systems for in-space assembly and operations.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Robotics/Computer Science Degree</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>Simulation Training Required</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profession 6 -->
+            <div class="profession-card">
+                <div class="profession-header">
+                    <div class="profession-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="profession-title">Space Psychologist</h3>
+                        <div class="profession-type">Behavioral Health</div>
+                    </div>
+                </div>
+                <p class="profession-description">
+                    Experts in crew dynamics, psychological adaptation to space, 
+                    and behavioral health support for long-duration missions.
+                </p>
+                <div class="profession-requirements">
+                    <div class="requirement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>PhD in Psychology + Space Specialization</span>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-clock"></i>
+                        <span>Clinical Experience Required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="application-section">
+        <div class="section-header">
+            <h2 class="section-title">Begin Your <span class="gradient-text">Journey</span></h2>
+            <p class="section-subtitle">The application process for the 2025 cosmonaut training class is now open. Limited positions available.</p>
+        </div>
+        
+        <div class="application-steps">
+            <div class="application-step">
+                <div class="step-index">1</div>
+                <div class="step-info">
+                    <h4>Submit Online Application</h4>
+                    <p>Complete the digital application form with academic, professional, and medical information.</p>
+                </div>
+            </div>
+            
+            <div class="application-step">
+                <div class="step-index">2</div>
+                <div class="step-info">
+                    <h4>Document Verification</h4>
+                    <p>Submit certified copies of degrees, professional certifications, and medical records.</p>
+                </div>
+            </div>
+            
+            <div class="application-step">
+                <div class="step-index">3</div>
+                <div class="step-info">
+                    <h4>Preliminary Assessment</h4>
+                    <p>Complete online cognitive and psychological assessments within 72 hours of invitation.</p>
+                </div>
+            </div>
+            
+            <div class="application-step">
+                <div class="step-index">4</div>
+                <div class="step-info">
+                    <h4>In-Person Evaluation</h4>
+                    <p>Travel to Batticaloa Spaceport for physical, technical, and team assessment exercises.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <a href="#" class="cta-button primary large">
+                <i class="fas fa-file-alt"></i> Start Application
+            </a>
+            <a href="#" class="cta-button secondary" style="margin-left: 1rem;">
+                <i class="fas fa-question-circle"></i> Application FAQ
+            </a>
+        </div>
+    </section>
+
+    <!-- Training Calendar -->
+    <section class="calendar-section">
+        <div class="calendar-container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming <span style="color: var(--survival-orange);">Training Events</span></h2>
+                <p class="section-subtitle">Public events, open days, and specialized training programs available to qualified applicants.</p>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-event">
+                    <div class="event-date">March 15-30, 2024</div>
+                    <h3 class="event-title">Zero-G Familiarization Course</h3>
+                    <p class="event-description">Introduction to microgravity operations for selected STEM professionals.</p>
+                </div>
+                
+                <div class="calendar-event">
+                    <div class="event-date">April 5, 2024</div>
+                    <h3 class="event-title">Space Medicine Symposium</h3>
+                    <p class="event-description">Annual conference on space health and physiological adaptation research.</p>
+                </div>
+                
+                <div class="calendar-event">
+                    <div class="event-date">May 20-25, 2024</div>
+                    <h3 class="event-title">International Crew Training</h3>
+                    <p class="event-description">Joint training exercise with NASA and Roscosmos partner astronauts.</p>
+                </div>
+                
+                <div class="calendar-event">
+                    <div class="event-date">June 1, 2024</div>
+                    <h3 class="event-title">2025 Class Application Deadline</h3>
+                    <p class="event-description">Final date for submission of cosmonaut candidate applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">SLSEA</span>
+                            <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                        </div>
+                    </a>
+                    <p class="footer-mission">
+                        Training humanity's next generation of space explorers at our world-class 
+                        facilities in Batticaloa, Sri Lanka.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4 class="link-title">Training Programs</h4>
+                        <a href="#" class="footer-link">Cosmonaut Training</a>
+                        <a href="#" class="footer-link">Mission Specialist</a>
+                        <a href="#" class="footer-link">Flight Surgeons</a>
+                        <a href="#" class="footer-link">Technical Training</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Admissions</h4>
+                        <a href="#" class="footer-link">Application Process</a>
+                        <a href="#" class="footer-link">Requirements</a>
+                        <a href="#" class="footer-link">Timeline</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Facilities</h4>
+                        <a href="#" class="footer-link">Training Center</a>
+                        <a href="#" class="footer-link">Simulation Labs</a>
+                        <a href="#" class="footer-link">Medical Center</a>
+                        <a href="#" class="footer-link">Research Labs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p class="address">
+                        <i class="fas fa-map-marker-alt"></i> Cosmonaut Training Center, Batticaloa Spaceport, Eastern Province, Sri Lanka
+                    </p>
+                    <p class="copyright">
+                        &copy; <span id="currentYear"></span> Sri Lankan Space Exploration Agency. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Training Page
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.padding = '0.7rem 0';
+                    navbar.style.backdropFilter = 'blur(20px)';
+                } else {
+                    navbar.style.padding = '1rem 0';
+                    navbar.style.backdropFilter = 'blur(15px)';
+                }
+            });
+            
+            // Animated counters for stats
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                // Start counter when element is in view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+            
+            // Module card hover effects
+            const moduleCards = document.querySelectorAll('.module-card');
+            moduleCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Facility card animations
+            const facilityCards = document.querySelectorAll('.facility-card');
+            facilityCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Country card interactions
+            const countryCards = document.querySelectorAll('.country-card');
+            countryCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1) rotate(5deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                });
+            });
+            
+            // Profession card interactions
+            const professionCards = document.querySelectorAll('.profession-card');
+            professionCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = 'var(--shadow-lg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'var(--shadow-md)';
+                });
+            });
+            
+            // Application step hover effects
+            const applicationSteps = document.querySelectorAll('.application-step');
+            applicationSteps.forEach(step => {
+                step.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                });
+                
+                step.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+            // Calendar event hover effects
+            const calendarEvents = document.querySelectorAll('.calendar-event');
+            calendarEvents.forEach(event => {
+                event.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                event.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Timeline content hover effects
+            const timelineContents = document.querySelectorAll('.timeline-content');
+            timelineContents.forEach(content => {
+                content.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                content.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Step content hover effects
+            const stepContents = document.querySelectorAll('.step-content');
+            stepContents.forEach(content => {
+                content.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px)';
+                });
+                
+                content.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+            // Language level animation
+            const languageDots = document.querySelectorAll('.level-dot');
+            languageDots.forEach((dot, index) => {
+                // Add subtle pulsing to active dots
+                if (dot.classList.contains('active')) {
+                    dot.style.animation = `pulse-dot ${1 + index * 0.2}s infinite alternate`;
+                }
+            });
+            
+            // Add CSS for dot animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse-dot {
+                    0% { opacity: 0.5; transform: scale(1); }
+                    100% { opacity: 1; transform: scale(1.2); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Training progress bar animation on scroll
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            function animateProgressBars() {
+                progressBars.forEach(bar => {
+                    const rect = bar.getBoundingClientRect();
+                    const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+                    
+                    if (isVisible) {
+                        const width = bar.style.width;
+                        bar.style.transition = 'width 1.5s ease-in-out';
+                        bar.style.width = width;
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', animateProgressBars);
+            animateProgressBars(); // Initial call
+            
+            // Parallax effect for floating astronauts
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const astronautFloats = document.querySelectorAll('.astronaut-float');
+                
+                astronautFloats.forEach((astronaut, index) => {
+                    const speed = 0.05 + (index * 0.03);
+                    astronaut.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+                });
+            });
+            
+            // International badge pulsing
+            const internationalBadge = document.querySelector('.international-badge');
+            setInterval(() => {
+                internationalBadge.style.animation = 'none';
+                setTimeout(() => {
+                    internationalBadge.style.animation = 'pulse-gold 2s infinite';
+                }, 10);
+            }, 4000);
+            
+            // Training module gleam effect
+            const trainingModules = document.querySelectorAll('.module-card');
+            trainingModules.forEach(module => {
+                module.addEventListener('mouseenter', function() {
+                    const before = this.querySelector('::before');
+                    if (before) {
+                        before.style.left = '100%';
+                    }
+                });
+            });
+            
+            // Simulate training progress updates
+            setInterval(() => {
+                const progressLabels = document.querySelectorAll('.progress-label span:last-child');
+                progressLabels.forEach(label => {
+                    if (label.textContent.includes('%')) {
+                        // Simulate small progress updates
+                        const match = label.textContent.match(/(\d+)%/);
+                        if (match) {
+                            let progress = parseInt(match[1]);
+                            if (progress < 100) {
+                                progress += Math.floor(Math.random() * 2);
+                                if (progress > 100) progress = 100;
+                                
+                                // Find corresponding progress bar
+                                const container = label.closest('.progress-container');
+                                if (container) {
+                                    const fill = container.querySelector('.progress-fill');
+                                    if (fill) {
+                                        fill.style.width = `${progress}%`;
+                                    }
+                                }
+                                
+                                label.textContent = `${progress}% Complete`;
+                            }
+                        }
+                    }
+                });
+            }, 5000); // Update every 5 seconds
+        });
+        
+        // Additional training simulation
+        function simulateTrainingEvent(eventType) {
+            const events = {
+                'zero-g': { title: 'Zero-G Training Session', message: 'Parabolic flight training in progress with TU22M-S1' },
+                'eva': { title: 'EVA Simulation', message: 'Neutral buoyancy lab training for extravehicular activities' },
+                'survival': { title: 'Survival Training', message: 'High-altitude wilderness survival exercise ongoing' },
+                'medical': { title: 'Medical Training', message: 'Emergency medical procedures training in progress' }
+            };
+            
+            const event = events[eventType];
+            if (event) {
+                // Create notification
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: rgba(0, 102, 204, 0.9);
+                    border: 1px solid var(--glass-border);
+                    border-radius: var(--border-radius);
+                    padding: 1rem;
+                    color: white;
+                    z-index: 10000;
+                    max-width: 300px;
+                    animation: slideIn 0.5s ease;
+                `;
+                
+                notification.innerHTML = `
+                    <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color);">
+                        <i class="fas fa-bell"></i> ${event.title}
+                    </div>
+                    <div style="font-size: 0.9rem;">${event.message}</div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 500);
+                }, 5000);
+            }
+        }
+        
+        // Add CSS for notifications
+        const notificationStyle = document.createElement('style');
+        notificationStyle.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(notificationStyle);
+        
+        // Simulate random training events
+        setInterval(() => {
+            if (Math.random() > 0.7) { // 30% chance
+                const events = ['zero-g', 'eva', 'survival', 'medical'];
+                const randomEvent = events[Math.floor(Math.random() * events.length)];
+                simulateTrainingEvent(randomEvent);
+            }
+        }, 15000); // Every 15 seconds
+    </script>
+</body>
+</html>

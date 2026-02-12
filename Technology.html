@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology | Sri Lankan Space Exploration Agency (SLSEA)</title>
+    <meta name="description" content="Explore SLSEA's groundbreaking space technology including converted Tu22M bombers, advanced space planes, ion thrusters, and cutting-edge sensor systems.">
+    <meta name="keywords" content="SLSEA technology, space planes, ion thrusters, Tu22M conversion, space sensors, satellite technology, Sri Lanka space tech">
+    <meta name="author" content="Sri Lankan Space Exploration Agency">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <style>
+        /* ===== TECHNOLOGY PAGE STYLES ===== */
+        
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #0099ff;
+            --accent-color: #00ccff;
+            --dark-blue: #003366;
+            --space-black: #0a0a1a;
+            --space-gray: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3d9ff;
+            --text-muted: #6699cc;
+            --glass-bg: rgba(26, 26, 46, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 16px rgba(0, 102, 204, 0.2);
+            --shadow-lg: 0 8px 32px rgba(0, 153, 255, 0.3);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+            --moon-gold: #ffcc00;
+            --russia-red: #cc0000;
+            --ion-blue: #00aaff;
+            --sensor-green: #00cc66;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--space-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Animated Star Background */
+        .stars, .stars2, .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .stars {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.8"/></svg>') repeat;
+            animation: twinkle 100s linear infinite;
+        }
+
+        .stars2 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="0.8" fill="white" opacity="0.5"/></svg>') repeat;
+            animation: twinkle 150s linear infinite;
+        }
+
+        .stars3 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="1" fill="white" opacity="0.3"/></svg>') repeat;
+            animation: twinkle 200s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-1000px, -1000px); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(10, 10, 26, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .russia-gradient {
+            background: linear-gradient(90deg, var(--russia-red), #ff3333, #ff6666);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .ion-gradient {
+            background: linear-gradient(90deg, var(--ion-blue), #00ddff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button.primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* Technology Hero Section */
+        .tech-hero {
+            padding: 10rem 20px 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .tech-hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 102, 204, 0.2);
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tech-hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .tech-hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .tech-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-stat {
+            text-align: center;
+        }
+
+        .tech-stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 150px;
+        }
+
+        /* Section Common Styles */
+        section {
+            padding: 6rem 20px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* TU22M Conversion Section - HYPE SECTION */
+        .tu22m-section {
+            background: linear-gradient(135deg, rgba(204, 0, 0, 0.1), rgba(102, 0, 0, 0.05));
+            border-top: 1px solid rgba(204, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(204, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tu22m-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tu22m-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tu22m-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(90deg, rgba(204, 0, 0, 0.2), rgba(153, 0, 0, 0.2));
+            border: 1px solid var(--russia-red);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--russia-red);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 10px rgba(204, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(204, 0, 0, 0.5); }
+        }
+
+        .tu22m-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tu22m-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tu22m-intro {
+            max-width: 800px;
+            margin: 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(204, 0, 0, 0.2);
+        }
+
+        /* TU22M Variants Grid */
+        .tu22m-variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .variant-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .variant-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.15), 
+                transparent);
+            z-index: 1;
+            transition: left 0.7s ease;
+            pointer-events: none;
+            border-radius: var(--border-radius);
+        }
+
+        .variant-card:hover::before {
+            left: 100%;
+        }
+
+        .variant-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .variant-card.variant-1:hover {
+            border-color: var(--primary-color);
+        }
+
+        .variant-card.variant-2:hover {
+            border-color: #ff9900;
+        }
+
+        .variant-card.variant-3:hover {
+            border-color: var(--sensor-green);
+        }
+
+        .variant-badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .variant-1 .variant-badge {
+            background: rgba(0, 102, 204, 0.2);
+            color: var(--primary-color);
+            border: 1px solid rgba(0, 102, 204, 0.3);
+        }
+
+        .variant-2 .variant-badge {
+            background: rgba(255, 153, 0, 0.2);
+            color: #ff9900;
+            border: 1px solid rgba(255, 153, 0, 0.3);
+        }
+
+        .variant-3 .variant-badge {
+            background: rgba(0, 204, 102, 0.2);
+            color: var(--sensor-green);
+            border: 1px solid rgba(0, 204, 102, 0.3);
+        }
+
+        .variant-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .variant-1 .variant-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .variant-2 .variant-icon {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+        }
+
+        .variant-3 .variant-icon {
+            background: linear-gradient(135deg, var(--sensor-green), #00ff99);
+        }
+
+        .variant-designation {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .variant-name {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .variant-specs {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .spec-label {
+            color: var(--text-secondary);
+        }
+
+        .spec-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Conversion Stats */
+        .conversion-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .conversion-stat {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(204, 0, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .conversion-stat:hover {
+            transform: translateY(-5px);
+            border-color: var(--russia-red);
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.2);
+        }
+
+        .conversion-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--russia-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .conversion-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Space Plane Technology Section */
+        .space-plane-tech {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .plane-tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .plane-tech-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plane-tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(0, 170, 255, 0.2), 
+                transparent);
+            transition: left 0.7s ease;
+            pointer-events: none;
+            border-radius: var(--border-radius);
+        }
+
+        .plane-tech-card:hover::before {
+            left: 100%;
+        }
+
+        .plane-tech-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plane-tech-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .plane-tech-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .plane-tech-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Ion Thruster Section */
+        .ion-thruster-section {
+            background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(0, 255, 255, 0.05));
+            border-top: 1px solid rgba(0, 170, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        .ion-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ion-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .ion-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(90deg, rgba(0, 170, 255, 0.2), rgba(0, 221, 255, 0.2));
+            border: 1px solid var(--ion-blue);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--ion-blue);
+            animation: pulse-blue 2s infinite;
+        }
+
+        @keyframes pulse-blue {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 170, 255, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(0, 170, 255, 0.5); }
+        }
+
+        .ion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .ion-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 170, 255, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .ion-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--ion-blue);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+        }
+
+        .ion-icon {
+            font-size: 3rem;
+            color: var(--ion-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .ion-spec {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        .ion-spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.1);
+        }
+
+        /* Sensor Technology Section */
+        .sensor-tech-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sensor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .sensor-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sensor-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(0, 204, 102, 0.2), 
+                transparent);
+            transition: left 0.7s ease;
+            pointer-events: none;
+            border-radius: var(--border-radius);
+        }
+
+        .sensor-card:hover::before {
+            left: 100%;
+        }
+
+        .sensor-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--sensor-green);
+            box-shadow: 0 10px 30px rgba(0, 204, 102, 0.2);
+        }
+
+        .sensor-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sensor-green), #00ff99);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--space-black);
+        }
+
+        .sensor-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .sensor-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Satellite Technology */
+        .satellite-section {
+            background: linear-gradient(135deg, rgba(102, 0, 204, 0.1), rgba(153, 51, 255, 0.05));
+            border-top: 1px solid rgba(102, 0, 204, 0.2);
+            border-bottom: 1px solid rgba(102, 0, 204, 0.2);
+        }
+
+        .satellite-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .satellite-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .satellite-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(102, 0, 204, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .satellite-card:hover {
+            transform: translateY(-5px);
+            border-color: #6600cc;
+            box-shadow: 0 10px 20px rgba(102, 0, 204, 0.2);
+        }
+
+        .satellite-model {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #9900ff;
+            margin-bottom: 1rem;
+        }
+
+        /* Tech Comparison Table */
+        .tech-comparison {
+            max-width: 1200px;
+            margin: 4rem auto;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Tech Demo Request */
+        .tech-demo {
+            text-align: center;
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 153, 255, 0.1));
+            border-radius: var(--border-radius);
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--space-gray);
+            border-top: 1px solid rgba(0, 102, 204, 0.3);
+            padding: 4rem 20px 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .footer-mission {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .link-column {
+            min-width: 150px;
+        }
+
+        .link-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .address {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .tech-hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .tu22m-title {
+                font-size: 2.5rem;
+            }
+            
+            .tu22m-variants {
+                grid-template-columns: 1fr;
+            }
+            
+            .plane-tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ion-grid, .sensor-grid, .satellite-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(10, 10, 26, 0.95);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid var(--glass-border);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .tech-hero {
+                padding: 8rem 20px 4rem;
+            }
+            
+            .tech-hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .tech-hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .conversion-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-main {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tech-hero-title {
+                font-size: 2rem;
+            }
+            
+            .tech-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .tu22m-title {
+                font-size: 2rem;
+            }
+            
+            .variant-card {
+                padding: 1.5rem;
+            }
+            
+            .tech-demo {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* Floating Jet Animation */
+        .jet-float {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle at center, rgba(204, 0, 0, 0.2), transparent);
+            top: 100px;
+            right: 100px;
+            opacity: 0.3;
+            filter: blur(30px);
+            animation: float-jet 25s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .jet-float-2 {
+            width: 150px;
+            height: 150px;
+            top: 300px;
+            left: 100px;
+            animation: float-jet 30s ease-in-out infinite reverse;
+        }
+
+        @keyframes float-jet {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(100px, 50px) rotate(120deg); }
+            66% { transform: translate(-50px, 100px) rotate(240deg); }
+        }
+
+        /* Tech Spec Highlight */
+        .tech-highlight {
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.1), transparent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Tech Comparison Badge */
+        .tech-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge-pioneer {
+            background: rgba(0, 204, 102, 0.2);
+            color: var(--sensor-green);
+            border: 1px solid rgba(0, 204, 102, 0.3);
+        }
+
+        .badge-exclusive {
+            background: rgba(204, 0, 0, 0.2);
+            color: var(--russia-red);
+            border: 1px solid rgba(204, 0, 0, 0.3);
+        }
+
+        .badge-world-first {
+            background: rgba(0, 170, 255, 0.2);
+            color: var(--ion-blue);
+            border: 1px solid rgba(0, 170, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">SLSEA</span>
+                    <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="Home.html" class="nav-link">Home</a>
+                <a href="missions.html" class="nav-link">Missions</a>
+                <a href="technology.html" class="nav-link active">Technology</a>
+                <a href="spaceport.html" class="nav-link">Spaceport</a>
+                <a href="training.html" class="nav-link">Cosmonaut Training</a>
+                <a href="partnerships.html" class="nav-link">Partnerships</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Technology Hero Section -->
+    <section class="tech-hero">
+        <div class="tech-hero-badge">Pioneering Innovation</div>
+        <h1 class="tech-hero-title">
+            Cutting-Edge <span class="gradient-text">Space Technology</span>
+        </h1>
+        <p class="tech-hero-subtitle">
+            From converted supersonic bombers to advanced ion propulsion, SLSEA develops and deploys 
+            revolutionary technologies that redefine space exploration capabilities.
+        </p>
+        
+        <div class="tech-stats">
+            <div class="tech-stat">
+                <div class="tech-stat-number">42</div>
+                <div class="tech-stat-label">Patented Technologies</div>
+            </div>
+            <div class="tech-stat">
+                <div class="tech-stat-number">10</div>
+                <div class="tech-stat-label">TU22M Bombers Converted</div>
+            </div>
+            <div class="tech-stat">
+                <div class="tech-stat-number">5,000+</div>
+                <div class="tech-stat-label">Ion Thruster Test Hours</div>
+            </div>
+            <div class="tech-stat">
+                <div class="tech-stat-number">100%</div>
+                <div class="tech-stat-label">In-House Development</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TU22M Conversion Section - HYPE -->
+    <section class="tu22m-section">
+        <div class="jet-float"></div>
+        <div class="jet-float jet-float-2"></div>
+        
+        <div class="tu22m-container">
+            <div class="tu22m-header">
+                <div class="tu22m-badge">Exclusive Technology Acquisition</div>
+                <h2 class="tu22m-title">
+                    TU22M <span class="russia-gradient">SUPERSONIC BOMBER</span> CONVERSION PROGRAM
+                </h2>
+                <p class="tu22m-subtitle">
+                    SLSEA's historic acquisition and complete remodelling of 10 Russian Tu22M "Backfire" 
+                    strategic bombers into three specialized space technology platforms.
+                </p>
+            </div>
+            
+            <div class="tu22m-intro">
+                <p>
+                    In 2021, SLSEA completed a landmark deal with Roscosmos and Russian defense authorities 
+                    to acquire 10 decommissioned Tu22M strategic bombers. Our engineering teams have completely 
+                    remodelled these supersonic aircraft into three distinct specialized platforms, creating 
+                    unique capabilities unmatched by any other space agency.
+                </p>
+            </div>
+            
+            <!-- TU22M Conversion Variants -->
+            <div class="tu22m-variants">
+                <!-- Variant 1 -->
+                <div class="variant-card variant-1">
+                    <div class="variant-badge">TU22M-S1</div>
+                    <div class="variant-icon">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3 class="variant-designation">TU22M-S1 "GURU"</h3>
+                    <div class="variant-name">Astronaut Training & High-G Simulation Platform</div>
+                    
+                    <div class="variant-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Aircraft Assigned</span>
+                            <span class="spec-value">4 Units</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Max Speed</span>
+                            <span class="spec-value">Mach 2.3</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Ceiling</span>
+                            <span class="spec-value">60,000 ft</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Modifications</span>
+                            <span class="spec-value">Zero-G Parabolic Flight Capability</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Training Capacity</span>
+                            <span class="spec-value">8 Trainees + 2 Instructors</span>
+                        </div>
+                    </div>
+                    
+                    <p style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
+                        Modified with variable-stability flight systems and parabolic flight capability 
+                        to simulate microgravity and high-G re-entry profiles for astronaut training.
+                    </p>
+                </div>
+                
+                <!-- Variant 2 -->
+                <div class="variant-card variant-2">
+                    <div class="variant-badge">TU22M-L1</div>
+                    <div class="variant-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="variant-designation">TU22M-L1 "AGNI"</h3>
+                    <div class="variant-name">Air-Based Launch Platform</div>
+                    
+                    <div class="variant-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Aircraft Assigned</span>
+                            <span class="spec-value">3 Units</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Max Payload</span>
+                            <span class="spec-value">12,000 kg</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Launch Altitude</span>
+                            <span class="spec-value">50,000 ft</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Orbital Insertion</span>
+                            <span class="spec-value">LEO up to 500km</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Launch Cost Reduction</span>
+                            <span class="spec-value">65% vs Ground Launch</span>
+                        </div>
+                    </div>
+                    
+                    <p style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
+                        Modified with reinforced airframe and launch rail system for air-dropping small 
+                        satellites and space plane prototypes, dramatically reducing launch costs.
+                    </p>
+                </div>
+                
+                <!-- Variant 3 -->
+                <div class="variant-card variant-3">
+                    <div class="variant-badge">TU22M-T1</div>
+                    <div class="variant-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="variant-designation">TU22M-T1 "BODHI"</h3>
+                    <div class="variant-name">Sensor & Technology Testbed</div>
+                    
+                    <div class="variant-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Aircraft Assigned</span>
+                            <span class="spec-value">3 Units</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Sensor Payload</span>
+                            <span class="spec-value">Up to 8,000 kg</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Endurance</span>
+                            <span class="spec-value">7+ hours</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Data Collection</span>
+                            <span class="spec-value">Real-time to Ground Stations</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Testing Capability</span>
+                            <span class="spec-value">Hypersonic to Suborbital</span>
+                        </div>
+                    </div>
+                    
+                    <p style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
+                        Equipped with modular sensor bays and extensive instrumentation for testing 
+                        space sensors, communication systems, and experimental technologies in near-space conditions.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Conversion Statistics -->
+            <div class="conversion-stats">
+                <div class="conversion-stat">
+                    <div class="conversion-number">10</div>
+                    <div class="conversion-label">Bombers Completely Remodelled</div>
+                </div>
+                
+                <div class="conversion-stat">
+                    <div class="conversion-number">18</div>
+                    <div class="conversion-label">Months Conversion Time</div>
+                </div>
+                
+                <div class="conversion-stat">
+                    <div class="conversion-number">240+</div>
+                    <div class="conversion-label">SLSEA Engineers Involved</div>
+                </div>
+                
+                <div class="conversion-stat">
+                    <div class="conversion-number">$650M</div>
+                    <div class="conversion-label">Total Program Value</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Plane Technology Section -->
+    <section class="space-plane-tech">
+        <div class="section-header">
+            <h2 class="section-title">Pioneering <span class="gradient-text">Space Plane Technology</span></h2>
+            <p class="section-subtitle">
+                SLSEA leads the world in reusable space plane development, with the Vimana program 
+                achieving breakthroughs in hypersonic flight and orbital operations.
+                <span class="tech-badge badge-pioneer">World Pioneer</span>
+            </p>
+        </div>
+        
+        <div class="plane-tech-grid">
+            <div class="plane-tech-card">
+                <div class="plane-tech-icon">
+                    <i class="fas fa-jet-fighter"></i>
+                </div>
+                <h3 class="plane-tech-title">Hypersonic Flight Systems</h3>
+                <p class="plane-tech-description">
+                    Advanced scramjet propulsion enabling sustained Mach 8+ flight for rapid 
+                    response satellite deployment and global reach capability.
+                </p>
+                <div class="tech-highlight">Mach 8.2 achieved in test flights</div>
+            </div>
+            
+            <div class="plane-tech-card">
+                <div class="plane-tech-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="plane-tech-title">Rapid Reusability</h3>
+                <p class="plane-tech-description">
+                    48-hour turnaround capability between flights with minimal refurbishment, 
+                    reducing operational costs by 85% compared to traditional rockets.
+                </p>
+                <div class="tech-highlight">15+ flights per vehicle design life</div>
+            </div>
+            
+            <div class="plane-tech-card">
+                <div class="plane-tech-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="plane-tech-title">Advanced Thermal Protection</h3>
+                <p class="plane-tech-description">
+                    Next-generation ceramic composite tiles with self-healing capabilities, 
+                    providing unprecedented durability for multiple re-entry cycles.
+                </p>
+                <div class="tech-highlight">Withstands 1800°C re-entry temperatures</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ion Thruster Technology Section -->
+    <section class="ion-thruster-section">
+        <div class="ion-container">
+            <div class="ion-header">
+                <div class="ion-badge">Revolutionary Propulsion</div>
+                <h2 class="section-title">Advanced <span class="ion-gradient">Ion Thruster Systems</span></h2>
+                <p class="section-subtitle">
+                    SLSEA's hydrogen-fueled ion propulsion systems provide unprecedented efficiency 
+                    for deep space missions and orbital station-keeping.
+                    <span class="tech-badge badge-world-first">World's First H₂ Ion Engine</span>
+                </p>
+            </div>
+            
+            <div class="ion-grid">
+                <div class="ion-card">
+                    <div class="ion-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>VASIMIR-H2 Thruster</h3>
+                    <p>Variable Specific Impulse Magnetoplasma Rocket using hydrogen fuel</p>
+                    
+                    <div class="ion-spec">
+                        <div class="ion-spec-item">
+                            <span>Specific Impulse</span>
+                            <span>12,000 sec</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Thrust</span>
+                            <span>5.2 N</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Efficiency</span>
+                            <span>72%</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Fuel</span>
+                            <span>Liquid Hydrogen</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ion-card">
+                    <div class="ion-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Gridded Ion Thruster</h3>
+                    <p>High-efficiency electrostatic propulsion for satellite station-keeping</p>
+                    
+                    <div class="ion-spec">
+                        <div class="ion-spec-item">
+                            <span>Specific Impulse</span>
+                            <span>4,500 sec</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Thrust</span>
+                            <span>250 mN</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Power</span>
+                            <span>4.5 kW</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Lifetime</span>
+                            <span>25,000 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ion-card">
+                    <div class="ion-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Solar Electric Propulsion</h3>
+                    <p>Integrated solar arrays providing continuous power for deep space missions</p>
+                    
+                    <div class="ion-spec">
+                        <div class="ion-spec-item">
+                            <span>Solar Array</span>
+                            <span>50 kW</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Delta-V</span>
+                            <span>15 km/s</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Mission Duration</span>
+                            <span>10+ years</span>
+                        </div>
+                        <div class="ion-spec-item">
+                            <span>Payload Mass Fraction</span>
+                            <span>45%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sensor Technology Section -->
+    <section class="sensor-tech-section">
+        <div class="section-header">
+            <h2 class="section-title">Advanced <span style="color: var(--sensor-green);">Sensor Systems</span></h2>
+            <p class="section-subtitle">
+                SLSEA develops and deploys cutting-edge sensor technology for space observation, 
+                debris tracking, and scientific discovery.
+            </p>
+        </div>
+        
+        <div class="sensor-grid">
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-radar"></i>
+                </div>
+                <h3 class="sensor-title">Space Debris Tracking Radar</h3>
+                <p class="sensor-description">
+                    Phased array radar system capable of tracking objects as small as 1cm in LEO 
+                    from Batticaloa Spaceport, providing real-time collision avoidance data.
+                </p>
+                <div class="tech-highlight">1cm resolution at 1000km range</div>
+            </div>
+            
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3 class="sensor-title">Hyperspectral Imaging</h3>
+                <p class="sensor-description">
+                    256-band hyperspectral cameras providing unprecedented Earth observation 
+                    capabilities for agriculture, climate monitoring, and disaster response.
+                </p>
+                <div class="tech-highlight">5m ground resolution from 600km</div>
+            </div>
+            
+            <div class="sensor-card">
+                <div class="sensor-icon">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h3 class="sensor-title">Quantum Gravity Gradiometer</h3>
+                <p class="sensor-description">
+                    World's first space-based quantum gravity sensor for mineral exploration, 
+                    underground water detection, and gravitational field mapping.
+                </p>
+                <div class="tech-highlight">Sensitivity: 1 Eötvös</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satellite Technology Section -->
+    <section class="satellite-section">
+        <div class="satellite-container">
+            <div class="section-header">
+                <h2 class="section-title">Next-Generation <span class="gradient-text">Satellite Systems</span></h2>
+                <p class="section-subtitle">
+                    Modular, scalable satellite platforms designed for rapid deployment and 
+                    enhanced capabilities across communication, observation, and scientific missions.
+                </p>
+            </div>
+            
+            <div class="satellite-grid">
+                <div class="satellite-card">
+                    <div class="satellite-model">SATYAM-1 Series</div>
+                    <h3>Modular Communication Satellites</h3>
+                    <p>Software-defined radio platforms with 100Gbps throughput and beam-forming capability for South Asia coverage.</p>
+                </div>
+                
+                <div class="satellite-card">
+                    <div class="satellite-model">DRISHTI-2 Series</div>
+                    <h3>Earth Observation Constellation</h3>
+                    <p>12-satellite constellation providing 30-minute revisit time with SAR, optical, and thermal imaging capabilities.</p>
+                </div>
+                
+                <div class="satellite-card">
+                    <div class="satellite-model">GYAN-1 Series</div>
+                    <h3>Scientific Research Platforms</h3>
+                    <p>Dedicated research satellites for space weather, astronomy, and microgravity experiments with international collaboration ports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Comparison Table -->
+    <section class="tech-comparison">
+        <div class="section-header">
+            <h2 class="section-title">Technology <span class="gradient-text">Comparison</span></h2>
+            <p class="section-subtitle">How SLSEA's innovations compare to traditional space technology approaches.</p>
+        </div>
+        
+        <div class="comparison-table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Technology Area</th>
+                        <th>Traditional Approach</th>
+                        <th>SLSEA Innovation</th>
+                        <th>Advantage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Launch Systems</strong></td>
+                        <td>Expendable rockets, high cost per kg</td>
+                        <td>Reusable space planes & air launch</td>
+                        <td>85% cost reduction</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Propulsion</strong></td>
+                        <td>Chemical rockets, low efficiency</td>
+                        <td>Hydrogen ion thrusters</td>
+                        <td>10x higher specific impulse</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Training</strong></td>
+                        <td>Ground simulators, limited realism</td>
+                        <td>TU22M-S1 actual high-G flight</td>
+                        <td>Realistic training environment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensor Testing</strong></td>
+                        <td>Laboratory conditions only</td>
+                        <td>TU22M-T1 near-space flight testing</td>
+                        <td>Real-world validation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Satellite Deployment</strong></td>
+                        <td>Dedicated rocket launches</td>
+                        <td>TU22M-L1 air launch platform</td>
+                        <td>Rapid response capability</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Technology Demonstration Request -->
+    <section class="tech-demo">
+        <h2 class="section-title">Request <span class="gradient-text">Technology Demonstration</span></h2>
+        <p class="section-subtitle">
+            Government agencies, research institutions, and qualified industry partners can request 
+            technology demonstrations of SLSEA's innovative systems.
+        </p>
+        <a href="#" class="cta-button primary large" style="margin-top: 2rem;">
+            <i class="fas fa-video"></i> Schedule Demonstration
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">SLSEA</span>
+                            <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                        </div>
+                    </a>
+                    <p class="footer-mission">
+                        Developing and deploying revolutionary space technology from our advanced 
+                        Batticaloa Spaceport and research facilities.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4 class="link-title">Technology</h4>
+                        <a href="#" class="footer-link">Space Planes</a>
+                        <a href="#" class="footer-link">Ion Propulsion</a>
+                        <a href="#" class="footer-link">Sensor Systems</a>
+                        <a href="#" class="footer-link">TU22M Program</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Research</h4>
+                        <a href="#" class="footer-link">R&D Facilities</a>
+                        <a href="#" class="footer-link">Technology Papers</a>
+                        <a href="#" class="footer-link">Patents</a>
+                        <a href="#" class="footer-link">Collaborations</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Industry</h4>
+                        <a href="#" class="footer-link">Technology Transfer</a>
+                        <a href="#" class="footer-link">Licensing</a>
+                        <a href="#" class="footer-link">Partnerships</a>
+                        <a href="#" class="footer-link">Supplier Portal</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p class="address">
+                        <i class="fas fa-map-marker-alt"></i> Batticaloa Spaceport, Reclaimed Land Area, Eastern Province, Sri Lanka
+                    </p>
+                    <p class="copyright">
+                        &copy; <span id="currentYear"></span> Sri Lankan Space Exploration Agency. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Technology Page
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.padding = '0.7rem 0';
+                    navbar.style.backdropFilter = 'blur(20px)';
+                } else {
+                    navbar.style.padding = '1rem 0';
+                    navbar.style.backdropFilter = 'blur(15px)';
+                }
+            });
+            
+            // Enhanced card hover effects
+            const cards = document.querySelectorAll('.variant-card, .plane-tech-card, .sensor-card, .ion-card, .satellite-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Conversion stat hover effects
+            const conversionStats = document.querySelectorAll('.conversion-stat');
+            conversionStats.forEach(stat => {
+                stat.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                stat.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // TU22M variant highlighting
+            const variantCards = document.querySelectorAll('.variant-card');
+            variantCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const variantType = this.classList.contains('variant-1') ? 1 : 
+                                      this.classList.contains('variant-2') ? 2 : 3;
+                    
+                    // Add glowing effect based on variant
+                    let glowColor;
+                    if (variantType === 1) glowColor = 'rgba(0, 102, 204, 0.3)';
+                    if (variantType === 2) glowColor = 'rgba(255, 153, 0, 0.3)';
+                    if (variantType === 3) glowColor = 'rgba(0, 204, 102, 0.3)';
+                    
+                    this.style.boxShadow = `0 15px 40px ${glowColor}`;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'var(--shadow-lg)';
+                });
+            });
+            
+            // Animated badge pulsing
+            const animatedBadges = document.querySelectorAll('.tu22m-badge, .ion-badge');
+            animatedBadges.forEach(badge => {
+                setInterval(() => {
+                    badge.style.animation = 'none';
+                    setTimeout(() => {
+                        badge.style.animation = '';
+                    }, 10);
+                }, 4000);
+            });
+            
+            // Tech comparison table row highlighting
+            const tableRows = document.querySelectorAll('.comparison-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(0, 102, 204, 0.1)';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+            
+            // Tech badge animations
+            const techBadges = document.querySelectorAll('.tech-badge');
+            techBadges.forEach(badge => {
+                badge.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                badge.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Parallax effect for jet floats
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const jetFloats = document.querySelectorAll('.jet-float');
+                
+                jetFloats.forEach((jet, index) => {
+                    const speed = 0.05 + (index * 0.03);
+                    jet.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+                });
+            });
+            
+            // Tech highlight animation
+            const techHighlights = document.querySelectorAll('.tech-highlight');
+            techHighlights.forEach(highlight => {
+                highlight.addEventListener('mouseenter', function() {
+                    this.style.background = 'linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.2), transparent)';
+                });
+                
+                highlight.addEventListener('mouseleave', function() {
+                    this.style.background = 'linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.1), transparent)';
+                });
+            });
+            
+            // Initialize floating jet animations
+            const jetFloats = document.querySelectorAll('.jet-float');
+            jetFloats.forEach((jet, index) => {
+                jet.style.animationDelay = `${index * 3}s`;
+            });
+            
+            // Interactive tech spec display
+            const specItems = document.querySelectorAll('.spec-item, .ion-spec-item');
+            specItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+        });
+        
+        // Tech card gleam effect
+        const techCards = document.querySelectorAll('.plane-tech-card, .sensor-card');
+        techCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const before = this.querySelector('::before');
+                if (before) {
+                    before.style.left = '100%';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

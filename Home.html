@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lankan Space Exploration Agency (SLSEA) | Pioneering Space Technology</title>
+    <meta name="description" content="Sri Lanka's premier space agency pioneering space exploration, debris cleanup technology, and cosmonaut training. South Asia's largest spaceport located in Batticaloa.">
+    <meta name="keywords" content="Sri Lanka space agency, SLSEA, space exploration, space debris cleanup, cosmonaut training, Batticaloa spaceport, space technology">
+    <meta name="author" content="Sri Lankan Space Exploration Agency">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+<style>
+    /* style.css */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #0099ff;
+    --accent-color: #00ccff;
+    --dark-blue: #003366;
+    --space-black: #0a0a1a;
+    --space-gray: #1a1a2e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3d9ff;
+    --text-muted: #6699cc;
+    --glass-bg: rgba(26, 26, 46, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 102, 204, 0.2);
+    --shadow-lg: 0 8px 32px rgba(0, 153, 255, 0.3);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--space-black);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Animated Star Background */
+.stars, .stars2, .stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stars {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.8"/></svg>') repeat;
+    animation: twinkle 100s linear infinite;
+}
+
+.stars2 {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="0.8" fill="white" opacity="0.5"/></svg>') repeat;
+    animation: twinkle 150s linear infinite;
+}
+
+.stars3 {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="1" fill="white" opacity="0.3"/></svg>') repeat;
+    animation: twinkle 200s linear infinite;
+}
+
+@keyframes twinkle {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-1000px, -1000px); }
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(10, 10, 26, 0.8);
+    border-bottom: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* CTA Buttons */
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-button.primary {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 10rem 20px 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 102, 204, 0.2);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-line {
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    max-width: 120px;
+}
+
+.hero-visual {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 500px;
+    z-index: 1;
+}
+
+.floating-satellite {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 4rem;
+    color: var(--accent-color);
+    animation: orbit 20s linear infinite;
+}
+
+.floating-planet {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--primary-color), transparent);
+    filter: blur(20px);
+    opacity: 0.3;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+/* Section Common Styles */
+section {
+    padding: 6rem 20px;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Card Gleam Effect */
+.card-gleam {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.15), 
+        transparent);
+    z-index: 1;
+    transition: left 0.7s ease;
+    pointer-events: none;
+    border-radius: var(--border-radius);
+}
+
+/* Missions Section */
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow-lg);
+}
+
+.mission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.mission-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.mission-status {
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.mission-status.active {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.mission-status.upcoming {
+    background: rgba(255, 165, 0, 0.1);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.mission-progress {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.mission-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 102, 204, 0.3);
+}
+
+/* Technology Section */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.tech-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.tech-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tech-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tech-link:hover {
+    gap: 0.8rem;
+}
+
+/* Spaceport Section - Fixed Layout */
+.spaceport {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.2), rgba(0, 102, 204, 0.1));
+    border-top: 1px solid rgba(0, 102, 204, 0.2);
+    border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+.spaceport-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spaceport-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Spaceport Visual - Fixed Map */
+.spaceport-visual {
+    margin: 3rem 0;
+}
+
+.map-container {
+    background: rgba(10, 20, 40, 0.7);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.map-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.map-area {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(135deg, #001a33, #003366);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+/* Ocean Area */
+.ocean-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.6));
+    border-left: 2px dashed rgba(0, 204, 255, 0.5);
+}
+
+.ocean-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 204, 255, 0.3), 
+        transparent);
+    animation: wave-animation 3s ease-in-out infinite;
+}
+
+.wave-2 {
+    bottom: 20px;
+    animation-delay: 1.5s;
+    opacity: 0.5;
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+/* Runway */
+.runway-visual {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    width: 80%;
+    transform: translateY(-50%);
+}
+
+.runway-label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.runway-line {
+    height: 20px;
+    background: linear-gradient(90deg, 
+        #333333, 
+        #666666, 
+        #999999, 
+        #666666, 
+        #333333);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.runway-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        #00ff00 20px,
+        #00ff00 40px
+    );
+    transform: translateY(-50%);
+}
+
+/* Launch Pads */
+.launch-pad {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: rgba(255, 102, 0, 0.15);
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.launch-pad:hover {
+    background: rgba(255, 102, 0, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+}
+
+.pad-alpha {
+    top: 20%;
+    left: 15%;
+}
+
+.pad-beta {
+    top: 50%;
+    left: 25%;
+}
+
+.pad-gamma {
+    top: 75%;
+    left: 35%;
+}
+
+.pad-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+.pad-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.pad-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.pad-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Facilities */
+.facility {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background: rgba(0, 102, 204, 0.15);
+    border: 1px solid rgba(0, 102, 204, 0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+}
+
+.facility:hover {
+    background: rgba(0, 102, 204, 0.25);
+    transform: scale(1.05);
+}
+
+.mission-control {
+    top: 20%;
+    right: 20%;
+}
+
+.assembly-building {
+    top: 50%;
+    right: 30%;
+}
+
+.tracking-station {
+    top: 75%;
+    right: 25%;
+}
+
+.facility-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.facility-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Coastline */
+.coastline {
+    position: absolute;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+}
+
+/* Map Legend */
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.launchpad-color {
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+}
+
+.runway-color {
+    background: linear-gradient(90deg, #666666, #999999);
+}
+
+.facility-color {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Spaceport Features */
+.spaceport-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.feature-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Spaceport CTA */
+.spaceport-cta {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cta-button.large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design for Spaceport */
+@media (max-width: 768px) {
+    .map-area {
+        height: 400px;
+    }
+    
+    .pad-alpha {
+        top: 15%;
+        left: 10%;
+    }
+    
+    .pad-beta {
+        top: 45%;
+        left: 20%;
+    }
+    
+    .pad-gamma {
+        top: 70%;
+        left: 30%;
+    }
+    
+    .mission-control {
+        top: 15%;
+        right: 15%;
+    }
+    
+    .assembly-building {
+        top: 45%;
+        right: 25%;
+    }
+    
+    .tracking-station {
+        top: 70%;
+        right: 20%;
+    }
+    
+    .ocean-label {
+        font-size: 0.8rem;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .spaceport-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .spaceport-cta {
+        flex-direction: column;
+    }
+    
+    .spaceport-cta .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-area {
+        height: 300px;
+    }
+    
+    .launch-pad, .facility {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+    
+    .launch-pad:hover, .facility:hover {
+        transform: scale(0.85);
+    }
+    
+    .map-legend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Training Section */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.training-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.training-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow-lg);
+}
+
+.training-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.training-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.training-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.training-cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 102, 204, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+.cta-text {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Partnerships Section */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-logo {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 102, 204, 0.3);
+}
+
+.logo-placeholder {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Contact CTA */
+.contact-cta {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-container {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.2), rgba(0, 102, 204, 0.2));
+    border-radius: var(--border-radius);
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 102, 204, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+}
+
+.orbiting-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    top: 30%;
+    right: 20%;
+    animation: orbit-small 8s linear infinite;
+}
+
+.dot-2 {
+    width: 6px;
+    height: 6px;
+    background: var(--secondary-color);
+    animation: orbit-small 10s linear infinite reverse;
+    top: 50%;
+    right: 30%;
+}
+
+.dot-3 {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    animation: orbit-small 12s linear infinite;
+    top: 70%;
+    right: 40%;
+}
+
+@keyframes orbit-small {
+    0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+/* Footer */
+.footer {
+    background: var(--space-gray);
+    border-top: 1px solid rgba(0, 102, 204, 0.3);
+    padding: 4rem 20px 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-mission {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.link-column {
+    min-width: 150px;
+}
+
+.link-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.address {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .spaceport-container {
+        flex-direction: column;
+    }
+    
+    .spaceport-visual {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 10, 26, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        border-bottom: 1px solid var(--glass-border);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .hero {
+        padding: 8rem 20px 4rem;
+    }
+    
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-visual {
+        display: none;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .cta-button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .missions-grid, .tech-grid, .training-grid, .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-container {
+        padding: 3rem 2rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .contact-buttons .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .cta-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.7rem;
+    }
+    
+    .spaceport-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">SLSEA</span>
+                    <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="Missions.html" class="nav-link">Missions</a>
+                <a href="Technology.html" class="nav-link">Technology</a>
+                <a href="Spaceport.html" class="nav-link">Spaceport</a>
+                <a href="Training.html" class="nav-link">Cosmonaut Training</a>
+                <a href="Partnerships.html" class="nav-link">Partnerships</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">EST. 2015</div>
+            <h1 class="hero-title">
+                <span class="hero-line">Pioneering the Future of</span>
+                <span class="hero-line gradient-text">Space Exploration</span>
+            </h1>
+            <p class="hero-subtitle">
+                The Sri Lankan Space Exploration Agency leads South Asia in space technology, debris cleanup, and advanced cosmonaut training. Pushing boundaries from our state-of-the-art Batticaloa Spaceport.
+            </p>
+            <div class="hero-buttons">
+                <a href="#missions" class="cta-button primary">
+                    <i class="fas fa-satellite"></i> View Missions
+                </a>
+                <a href="#spaceport" class="cta-button secondary">
+                    <i class="fas fa-map-marker-alt"></i> Virtual Tour
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Successful Launches</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">45+</div>
+                    <div class="stat-label">Debris Objects Cleaned</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Trained Cosmonauts</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Launch Platforms</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-satellite">
+                <i class="fas fa-satellite"></i>
+            </div>
+            <div class="floating-planet"></div>
+        </div>
+    </section>
+
+    <!-- Missions Section -->
+    <section class="missions" id="missions">
+        <div class="section-header">
+            <h2 class="section-title">Current <span class="gradient-text">Missions</span></h2>
+            <p class="section-subtitle">Advancing humanity's presence in space through innovative projects and cutting-edge research.</p>
+        </div>
+        
+        <div class="missions-grid">
+            <!-- Mission 1 -->
+            <div class="mission-card">
+                <div class="card-gleam"></div>
+                <div class="mission-header">
+                    <div class="mission-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="mission-status active">Active</div>
+                </div>
+                <h3 class="mission-title">Project Kessler Cleanup</h3>
+                <p class="mission-description">Advanced space debris removal using electromagnetic nets and laser guidance systems. Targeting defunct satellites and rocket fragments in LEO.</p>
+                <div class="mission-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="progress-text">75% Complete</span>
+                </div>
+                <div class="mission-tech">
+                    <span class="tech-tag">Electromagnetic Nets</span>
+                    <span class="tech-tag">Laser Guidance</span>
+                    <span class="tech-tag">AI Tracking</span>
+                </div>
+            </div>
+            
+            <!-- Mission 2 -->
+            <div class="mission-card">
+                <div class="card-gleam"></div>
+                <div class="mission-header">
+                    <div class="mission-icon">
+                        <i class="fas fa-space-shuttle"></i>
+                    </div>
+                    <div class="mission-status active">Active</div>
+                </div>
+                <h3 class="mission-title">Vimana Space Plane</h3>
+                <p class="mission-description">Reusable space plane technology for low-cost satellite deployment and orbital research. Successfully completed 3 test flights.</p>
+                <div class="mission-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <span class="progress-text">60% Complete</span>
+                </div>
+                <div class="mission-tech">
+                    <span class="tech-tag">Reusable Tech</span>
+                    <span class="tech-tag">Hypersonic</span>
+                    <span class="tech-tag">VTOL Capable</span>
+                </div>
+            </div>
+            
+            <!-- Mission 3 -->
+            <div class="mission-card">
+                <div class="card-gleam"></div>
+                <div class="mission-header">
+                    <div class="mission-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div class="mission-status upcoming">Upcoming</div>
+                </div>
+                <h3 class="mission-title">Lakshaya Lunar Orbiter</h3>
+                <p class="mission-description">First Sri Lankan lunar mission to study moon's south pole for water ice and establish communication relay network.</p>
+                <div class="mission-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                    <span class="progress-text">Launch Q4 2024</span>
+                </div>
+                <div class="mission-tech">
+                    <span class="tech-tag">Lunar Orbit</span>
+                    <span class="tech-tag">Ice Detection</span>
+                    <span class="tech-tag">Comms Relay</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology" id="technology">
+        <div class="section-header">
+            <h2 class="section-title">Advanced <span class="gradient-text">Technology</span></h2>
+            <p class="section-subtitle">Developing cutting-edge solutions for space exploration and orbital sustainability.</p>
+        </div>
+        
+        <div class="tech-grid">
+            <!-- Tech 1 -->
+            <div class="tech-card">
+                <div class="card-gleam"></div>
+                <div class="tech-image">
+                    <i class="fas fa-magnet"></i>
+                </div>
+                <h3 class="tech-title">EM Debris Capture</h3>
+                <p class="tech-description">Electromagnetic net systems that safely capture and deorbit space debris without propellant expenditure.</p>
+                <a href="#" class="tech-link">Technical Specifications <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Tech 2 -->
+            <div class="tech-card">
+                <div class="card-gleam"></div>
+                <div class="tech-image">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h3 class="tech-title">Advanced Sensors</h3>
+                <p class="tech-description">Next-generation spectroscopic and thermal imaging sensors for orbital object tracking and analysis.</p>
+                <a href="#" class="tech-link">Technical Specifications <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Tech 3 -->
+            <div class="tech-card">
+                <div class="card-gleam"></div>
+                <div class="tech-image">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="tech-title">AI Orbital Navigation</h3>
+                <p class="tech-description">Machine learning algorithms for autonomous debris avoidance and optimal orbital path planning.</p>
+                <a href="#" class="tech-link">Technical Specifications <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Tech 4 -->
+            <div class="tech-card">
+                <div class="card-gleam"></div>
+                <div class="tech-image">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="tech-title">Radiation Shielding</h3>
+                <p class="tech-description">Composite materials providing enhanced protection against cosmic radiation for long-duration missions.</p>
+                <a href="#" class="tech-link">Technical Specifications <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+            <!-- Spaceport Section -->
+    <section class="spaceport" id="spaceport">
+        <div class="section-header">
+            <h2 class="section-title">Batticaloa <span class="gradient-text">Spaceport</span></h2>
+            <p class="section-subtitle">South Asia's Premier Space Launch Facility</p>
+        </div>
+        
+        <div class="spaceport-container">
+            <div class="spaceport-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">5.2 km</div>
+                        <div class="stat-label">Longest Reclaimed Runway</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Launch Platforms</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Ocean-facing Trajectory</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">800 ha</div>
+                        <div class="stat-label">Total Facility Area</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spaceport-visual">
+                <div class="map-container">
+                    <div class="map-title">Spaceport Layout</div>
+                    <div class="map-area">
+                        <!-- Runway -->
+                        <div class="runway-visual">
+                            <div class="runway-label">Main Runway (5.2 km)</div>
+                            <div class="runway-line"></div>
+                        </div>
+                        
+                        <!-- Ocean Area -->
+                        <div class="ocean-area">
+                            <div class="ocean-label">Indian Ocean Launch Corridor</div>
+                            <div class="wave"></div>
+                            <div class="wave wave-2"></div>
+                        </div>
+                        
+                        <!-- Launch Pads -->
+                        <div class="launch-pad pad-alpha">
+                            <div class="pad-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="pad-info">
+                                <div class="pad-name">Platform Alpha</div>
+                                <div class="pad-desc">Heavy-lift Vehicles</div>
+                            </div>
+                        </div>
+                        
+                        <div class="launch-pad pad-beta">
+                            <div class="pad-icon">
+                                <i class="fas fa-space-shuttle"></i>
+                            </div>
+                            <div class="pad-info">
+                                <div class="pad-name">Platform Beta</div>
+                                <div class="pad-desc">Medium-lift & Space Planes</div>
+                            </div>
+                        </div>
+                        
+                        <div class="launch-pad pad-gamma">
+                            <div class="pad-icon">
+                                <i class="fas fa-satellite"></i>
+                            </div>
+                            <div class="pad-info">
+                                <div class="pad-name">Platform Gamma</div>
+                                <div class="pad-desc">Small Satellite Launches</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Facilities -->
+                        <div class="facility mission-control">
+                            <div class="facility-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="facility-label">Mission Control</div>
+                        </div>
+                        
+                        <div class="facility assembly-building">
+                            <div class="facility-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="facility-label">Vehicle Assembly</div>
+                        </div>
+                        
+                        <div class="facility tracking-station">
+                            <div class="facility-icon">
+                                <i class="fas fa-satellite-dish"></i>
+                            </div>
+                            <div class="facility-label">Tracking Station</div>
+                        </div>
+                        
+                        <!-- Coastline -->
+                        <div class="coastline"></div>
+                    </div>
+                    
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <div class="legend-color launchpad-color"></div>
+                            <span>Launch Platforms</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color runway-color"></div>
+                            <span>Runway</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color facility-color"></div>
+                            <span>Support Facilities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spaceport-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Optimal Safety</h3>
+                    <p class="feature-description">Coastal location allows launches over open ocean, minimizing risk to populated areas.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="feature-title">Ideal Climate</h3>
+                    <p class="feature-description">Consistent weather patterns with over 300 launch days per year.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Modern Infrastructure</h3>
+                    <p class="feature-description">State-of-the-art control systems, fueling facilities, and support infrastructure.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3 class="feature-title">Strategic Location</h3>
+                    <p class="feature-description">Equatorial proximity provides fuel efficiency for geostationary launches.</p>
+                </div>
+            </div>
+            
+            <div class="spaceport-cta">
+                <a href="#" class="cta-button primary large">
+                    <i class="fas fa-vr-cardboard"></i> Take Virtual Facility Tour
+                </a>
+                <a href="#" class="cta-button secondary">
+                    <i class="fas fa-file-pdf"></i> Download Technical Specs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cosmonaut Training Section -->
+    <section class="training" id="training">
+        <div class="section-header">
+            <h2 class="section-title">Cosmonaut <span class="gradient-text">Training</span></h2>
+            <p class="section-subtitle">World-class training facility for Lankan and international space professionals.</p>
+        </div>
+        
+        <div class="training-grid">
+            <div class="training-card">
+                <div class="card-gleam"></div>
+                <div class="training-image">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <h3 class="training-title">Zero-G Simulation</h3>
+                <p class="training-description">Neutral buoyancy laboratory and parabolic flight training for microgravity adaptation.</p>
+            </div>
+            
+            <div class="training-card">
+                <div class="card-gleam"></div>
+                <div class="training-image">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="training-title">Medical Preparedness</h3>
+                <p class="training-description">Space medicine, emergency procedures, and physiological adaptation training.</p>
+            </div>
+            
+            <div class="training-card">
+                <div class="card-gleam"></div>
+                <div class="training-image">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="training-title">International Program</h3>
+                <p class="training-description">Multi-lingual training for international partners and collaborative missions.</p>
+            </div>
+        </div>
+        
+        <div class="training-cta">
+            <p class="cta-text">Applications open for 2025 batch. Limited positions available.</p>
+            <a href="#" class="cta-button secondary">
+                <i class="fas fa-file-alt"></i> Apply Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section class="partnerships" id="partnerships">
+        <div class="section-header">
+            <h2 class="section-title">Global <span class="gradient-text">Partnerships</span></h2>
+            <p class="section-subtitle">Collaborating with international space agencies and research institutions.</p>
+        </div>
+        
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <div class="logo-placeholder">NASA</div>
+            </div>
+            <div class="partner-logo">
+                <div class="logo-placeholder">ESA</div>
+            </div>
+            <div class="partner-logo">
+                <div class="logo-placeholder">JAXA</div>
+            </div>
+            <div class="partner-logo">
+                <div class="logo-placeholder">ISRO</div>
+            </div>
+            <div class="partner-logo">
+                <div class="logo-placeholder">ROSCOSMOS</div>
+            </div>
+            <div class="partner-logo">
+                <div class="logo-placeholder">UNOOSA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta" id="contact">
+        <div class="cta-container">
+            <div class="card-gleam"></div>
+            <div class="cta-content">
+                <h2 class="cta-title">Reach for the <span class="gradient-text">Stars</span> With Us</h2>
+                <p class="cta-text">Interested in partnerships, research collaboration, or media inquiries? Contact the Sri Lankan Space Exploration Agency.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:contact@slsea.gov.lk" class="cta-button primary">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <a href="tel:+94112345678" class="cta-button secondary">
+                        <i class="fas fa-phone"></i> +94 11 234 5678
+                    </a>
+                </div>
+            </div>
+            <div class="cta-visual">
+                <div class="orbiting-dot"></div>
+                <div class="orbiting-dot dot-2"></div>
+                <div class="orbiting-dot dot-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">SLSEA</span>
+                            <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                        </div>
+                    </a>
+                    <p class="footer-mission">Advancing space technology for a sustainable orbital future and expanding humanity's presence beyond Earth.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4 class="link-title">Agency</h4>
+                        <a href="#" class="footer-link">About SLSEA</a>
+                        <a href="#" class="footer-link">Leadership</a>
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Newsroom</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Programs</h4>
+                        <a href="#" class="footer-link">Debris Cleanup</a>
+                        <a href="#" class="footer-link">Space Plane Tech</a>
+                        <a href="#" class="footer-link">Lunar Missions</a>
+                        <a href="#" class="footer-link">Research</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Facilities</h4>
+                        <a href="#" class="footer-link">Batticaloa Spaceport</a>
+                        <a href="#" class="footer-link">Training Center</a>
+                        <a href="#" class="footer-link">Research Labs</a>
+                        <a href="#" class="footer-link">Visitor Center</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p class="address">
+                        <i class="fas fa-map-marker-alt"></i> Batticaloa Spaceport, Reclaimed Land Area, Eastern Province, Sri Lanka
+                    </p>
+                    <p class="copyright">
+                        &copy; <span id="currentYear"></span> Sri Lankan Space Exploration Agency. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.style.padding = '0.7rem 0';
+            navbar.style.backdropFilter = 'blur(20px)';
+        } else {
+            navbar.style.padding = '1rem 0';
+            navbar.style.backdropFilter = 'blur(15px)';
+        }
+    });
+    
+    // Enhanced card hover effects with gleam
+    const cards = document.querySelectorAll('.mission-card, .tech-card, .training-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Add active class to nav links based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    
+    function highlightNavLink() {
+        const scrollY = window.pageYOffset;
+        
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 100;
+            const sectionId = section.getAttribute('id');
+            const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight && navLink) {
+                navLink.classList.add('active');
+            } else if (navLink) {
+                navLink.classList.remove('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', highlightNavLink);
+    
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    function animateProgressBars() {
+        progressBars.forEach(bar => {
+            const rect = bar.getBoundingClientRect();
+            const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+            
+            if (isVisible) {
+                const width = bar.style.width;
+                bar.style.transition = 'width 1.5s ease-in-out';
+                bar.style.width = width;
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', animateProgressBars);
+    
+    // Initialize with current section highlighted
+    highlightNavLink();
+    animateProgressBars();
+    
+    // Add subtle parallax effect to hero elements
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const heroVisual = document.querySelector('.hero-visual');
+        
+        if (heroVisual) {
+            heroVisual.style.transform = `translateY(${scrolled * 0.05}px)`;
+        }
+    });
+});
+    </script>
+</body>
+</html>

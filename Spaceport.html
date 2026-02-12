@@ -1,0 +1,3469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batticaloa Spaceport | Sri Lankan Space Exploration Agency (SLSEA)</title>
+    <meta name="description" content="Explore SLSEA's Batticaloa Spaceport - South Asia's largest and most advanced space launch facility with 3 launch pads, 5.2km runway, and world-class mission control.">
+    <meta name="keywords" content="Batticaloa Spaceport, SLSEA spaceport, launch pads, mission control, space launch facility, Sri Lanka spaceport">
+    <meta name="author" content="Sri Lankan Space Exploration Agency">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <style>
+        /* ===== SPACEPORT PAGE STYLES ===== */
+        
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #0099ff;
+            --accent-color: #00ccff;
+            --dark-blue: #003366;
+            --space-black: #0a0a1a;
+            --space-gray: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3d9ff;
+            --text-muted: #6699cc;
+            --glass-bg: rgba(26, 26, 46, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 16px rgba(0, 102, 204, 0.2);
+            --shadow-lg: 0 8px 32px rgba(0, 153, 255, 0.3);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+            --launchpad-red: #ff3333;
+            --runway-gray: #666666;
+            --facility-green: #00cc66;
+            --mission-control-purple: #9900ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--space-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Animated Star Background */
+        .stars, .stars2, .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .stars {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.8"/></svg>') repeat;
+            animation: twinkle 100s linear infinite;
+        }
+
+        .stars2 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="0.8" fill="white" opacity="0.5"/></svg>') repeat;
+            animation: twinkle 150s linear infinite;
+        }
+
+        .stars3 {
+            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="1" fill="white" opacity="0.3"/></svg>') repeat;
+            animation: twinkle 200s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-1000px, -1000px); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(10, 10, 26, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button.primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* Spaceport Hero Section */
+        .spaceport-hero {
+            padding: 10rem 20px 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .spaceport-hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 102, 204, 0.2);
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .spaceport-hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .spaceport-hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .spaceport-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .spaceport-stat {
+            text-align: center;
+        }
+
+        .spaceport-stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .spaceport-stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 150px;
+        }
+
+        /* Section Common Styles */
+        section {
+            padding: 6rem 20px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Redesigned Spaceport Layout Section */
+.spaceport-layout-section {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.2), rgba(0, 102, 204, 0.1));
+    border-top: 1px solid rgba(0, 102, 204, 0.2);
+    border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+    padding: 6rem 20px;
+}
+
+.layout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.layout-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.layout-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(90deg, rgba(0, 102, 204, 0.2), rgba(0, 153, 255, 0.2));
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.layout-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.layout-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Layout Navigation */
+.layout-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--text-primary);
+}
+
+.nav-btn.active {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Layout Sections */
+.layout-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.layout-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Overview Layout */
+.overview-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .overview-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Simplified Map */
+.simplified-map {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(135deg, #001a33, #003366);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--glass-border);
+    overflow: hidden;
+}
+
+.map-ocean {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.6));
+    border-left: 2px dashed rgba(0, 204, 255, 0.5);
+}
+
+.ocean-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 204, 255, 0.3), 
+        rgba(0, 204, 255, 0.5),
+        rgba(0, 204, 255, 0.3),
+        transparent);
+    animation: waveFlow 3s linear infinite;
+}
+
+@keyframes waveFlow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.coastline {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+}
+
+.map-runway {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    width: 50%;
+    transform: translateY(-50%);
+}
+
+.runway-label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.runway-visual {
+    height: 15px;
+    background: linear-gradient(90deg, 
+        #333333, 
+        #666666, 
+        #999999, 
+        #666666, 
+        #333333);
+    border-radius: 8px;
+    position: relative;
+}
+
+.runway-visual::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 15px,
+        #00ff00 15px,
+        #00ff00 30px
+    );
+    transform: translateY(-50%);
+}
+
+/* Launch Zones */
+.launch-zone {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.launch-zone:hover {
+    transform: scale(1.1);
+    z-index: 20;
+}
+
+.zone-marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0 0 15px currentColor;
+    animation: zonePulse 2s infinite;
+}
+
+@keyframes zonePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.zone-label {
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.alpha-zone {
+    top: 20%;
+    left: 20%;
+}
+
+.alpha-zone .zone-marker {
+    background: linear-gradient(135deg, #ff3333, #ff6666);
+    color: #ff3333;
+}
+
+.beta-zone {
+    top: 50%;
+    left: 30%;
+}
+
+.beta-zone .zone-marker {
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+    color: #ff9900;
+}
+
+.gamma-zone {
+    top: 70%;
+    left: 25%;
+}
+
+.gamma-zone .zone-marker {
+    background: linear-gradient(135deg, #00cc66, #00ff99);
+    color: #00cc66;
+}
+
+/* Facility Zones */
+.facility-zone {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 5;
+}
+
+.facility-zone:hover {
+    transform: scale(1.05);
+    z-index: 15;
+}
+
+.facility-zone .zone-marker {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.5);
+}
+
+.control-zone {
+    top: 15%;
+    right: 25%;
+}
+
+.assembly-zone {
+    top: 45%;
+    right: 35%;
+}
+
+.support-zone {
+    top: 75%;
+    right: 30%;
+}
+
+/* Security Perimeter */
+.security-perimeter {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 40%;
+    bottom: 5%;
+    border: 2px dashed rgba(255, 255, 0, 0.3);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.perimeter-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffff00;
+    border-radius: 50%;
+    animation: dotBlink 1s infinite;
+}
+
+.perimeter-dot:nth-child(1) { top: 0; left: 0; animation-delay: 0s; }
+.perimeter-dot:nth-child(2) { top: 0; right: 0; animation-delay: 0.25s; }
+.perimeter-dot:nth-child(3) { bottom: 0; right: 0; animation-delay: 0.5s; }
+.perimeter-dot:nth-child(4) { bottom: 0; left: 0; animation-delay: 0.75s; }
+
+@keyframes dotBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Overview Info Cards */
+.overview-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.info-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.info-stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.zone-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.zone-tag {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.launch-zone-tag {
+    background: rgba(255, 51, 51, 0.1);
+    color: #ff3333;
+    border: 1px solid rgba(255, 51, 51, 0.3);
+}
+
+.control-zone-tag {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 102, 204, 0.3);
+}
+
+.support-zone-tag {
+    background: rgba(0, 204, 102, 0.1);
+    color: #00cc66;
+    border: 1px solid rgba(0, 204, 102, 0.3);
+}
+
+/* Launch Pads Layout */
+.launchpads-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.pads-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pad-detail {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.pad-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.alpha-pad:hover {
+    border-color: #ff3333;
+}
+
+.beta-pad:hover {
+    border-color: #ff9900;
+}
+
+.gamma-pad:hover {
+    border-color: #00cc66;
+}
+
+.pad-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pad-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.alpha-pad .pad-icon {
+    background: linear-gradient(135deg, #ff3333, #ff6666);
+}
+
+.beta-pad .pad-icon {
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+}
+
+.gamma-pad .pad-icon {
+    background: linear-gradient(135deg, #00cc66, #00ff99);
+}
+
+.pad-title h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.pad-type {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.pad-visual {
+    height: 150px;
+    margin: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pad-diagram {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tower, .flame-trench, .umbilical-tower, .service-structure,
+.runway-access, .integration-hangar, .taxiway,
+.mobile-platform, .quick-integration, .automated-systems {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.alpha-pad .tower {
+    width: 20px;
+    height: 100px;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+.alpha-pad .flame-trench {
+    width: 80px;
+    height: 40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alpha-pad .umbilical-tower {
+    width: 15px;
+    height: 60px;
+    right: 30%;
+    top: 20px;
+}
+
+.beta-pad .runway-access {
+    width: 80%;
+    height: 20px;
+    bottom: 30px;
+    left: 10%;
+}
+
+.beta-pad .integration-hangar {
+    width: 60px;
+    height: 40px;
+    left: 20px;
+    top: 20px;
+}
+
+.gamma-pad .mobile-platform {
+    width: 70px;
+    height: 30px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pad-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spec-name {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.spec-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Comparison Table */
+.pads-comparison {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.pads-comparison h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.comparison-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.comparison-row.header {
+    background: rgba(0, 102, 204, 0.1);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.comparison-cell {
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-row.header .comparison-cell:first-child {
+    text-align: left;
+}
+
+.comparison-row .comparison-cell:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Facilities Layout */
+.facilities-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.facility-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+}
+
+.facility-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+}
+
+.facility-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.facility-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.facility-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.facility-stat {
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 102, 204, 0.1);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 102, 204, 0.3);
+}
+
+/* Flow Diagram */
+.facilities-flow {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.facilities-flow h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 200px;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.flow-arrow {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+/* Infrastructure Layout */
+.infrastructure-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.infra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.infra-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.infra-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+}
+
+.infra-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.infra-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.infra-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.infra-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.infra-list li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.infra-list li:before {
+    content: '▸';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Infrastructure Diagram */
+.infra-visual {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.infra-visual h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.infra-diagram {
+    height: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.infra-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.infra-layer:hover {
+    opacity: 0.8;
+}
+
+.layer-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+.power-layer {
+    background: linear-gradient(45deg, transparent 95%, #ffff00 100%);
+}
+
+.road-layer {
+    background: linear-gradient(90deg, transparent 95%, #666666 100%);
+}
+
+.water-layer {
+    background: linear-gradient(135deg, transparent 95%, #0066cc 100%);
+}
+
+.comms-layer {
+    background: radial-gradient(circle at 50% 50%, transparent 70%, #00cc66 100%);
+}
+
+.grid-lines, .road-lines, .water-lines, .comms-nodes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.grid-lines {
+    background-image: 
+        linear-gradient(rgba(255, 255, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.road-lines {
+    background: linear-gradient(90deg, 
+        transparent 20%, 
+        rgba(102, 102, 102, 0.3) 20%, 
+        rgba(102, 102, 102, 0.3) 25%, 
+        transparent 25%, 
+        transparent 45%, 
+        rgba(102, 102, 102, 0.3) 45%, 
+        rgba(102, 102, 102, 0.3) 50%, 
+        transparent 50%
+    );
+}
+
+.water-lines {
+    background: linear-gradient(90deg, 
+        transparent 30%, 
+        rgba(0, 102, 204, 0.3) 30%, 
+        rgba(0, 102, 204, 0.3) 35%, 
+        transparent 35%, 
+        transparent 65%, 
+        rgba(0, 102, 204, 0.3) 65%, 
+        rgba(0, 102, 204, 0.3) 70%, 
+        transparent 70%
+    );
+}
+
+.comms-nodes:before,
+.comms-nodes:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #00cc66;
+    border-radius: 50%;
+    animation: nodePulse 2s infinite;
+}
+
+.comms-nodes:before {
+    top: 30%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.comms-nodes:after {
+    top: 60%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+@keyframes nodePulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+        /* Facilities */
+        .facility {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 5;
+        }
+
+        .facility:hover {
+            transform: scale(1.05);
+            z-index: 15;
+        }
+
+        .facility-marker {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.5);
+        }
+
+        .facility-label {
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            border: 1px solid var(--primary-color);
+        }
+
+        .mission-control {
+            top: 15%;
+            right: 25%;
+        }
+
+        .vehicle-assembly {
+            top: 40%;
+            right: 35%;
+        }
+
+        .propellant-storage {
+            top: 65%;
+            right: 30%;
+        }
+
+        .satellite-prep {
+            top: 30%;
+            left: 15%;
+        }
+
+        .cosmonaut-quarters {
+            top: 60%;
+            left: 20%;
+        }
+
+        .research-center {
+            top: 80%;
+            right: 40%;
+        }
+
+        /* Map Legend */
+        .map-legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--glass-border);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .legend-color {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+
+        .legend-launchpad {
+            background: linear-gradient(135deg, #ff3333, #ff6666);
+            box-shadow: 0 0 10px #ff3333;
+        }
+
+        .legend-runway {
+            width: 40px;
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #666666, #999999);
+        }
+
+        .legend-facility {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .legend-ocean {
+            width: 40px;
+            height: 20px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #003366, #0066cc);
+        }
+
+        /* Launch Pad Details Section */
+        .launchpad-details {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .launchpad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .launchpad-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .launchpad-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.15), 
+                transparent);
+            z-index: 1;
+            transition: left 0.7s ease;
+            pointer-events: none;
+            border-radius: var(--border-radius);
+        }
+
+        .launchpad-card:hover::before {
+            left: 100%;
+        }
+
+        .launchpad-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .launchpad-card.alpha:hover {
+            border-color: #ff3333;
+        }
+
+        .launchpad-card.beta:hover {
+            border-color: #ff9900;
+        }
+
+        .launchpad-card.gamma:hover {
+            border-color: #00cc66;
+        }
+
+        .launchpad-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .launchpad-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .alpha .launchpad-icon {
+            background: linear-gradient(135deg, #ff3333, #ff6666);
+        }
+
+        .beta .launchpad-icon {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+        }
+
+        .gamma .launchpad-icon {
+            background: linear-gradient(135deg, #00cc66, #00ff99);
+        }
+
+        .launchpad-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .launchpad-designation {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .launchpad-specs {
+            margin: 1.5rem 0;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .spec-label {
+            color: var(--text-secondary);
+        }
+
+        .spec-value {
+            font-weight: 600;
+        }
+
+        /* Mission Control Section - HYPE */
+        .mission-control-section {
+            background: linear-gradient(135deg, rgba(153, 0, 255, 0.1), rgba(102, 0, 204, 0.05));
+            border-top: 1px solid rgba(153, 0, 255, 0.2);
+            border-bottom: 1px solid rgba(153, 0, 255, 0.2);
+        }
+
+        .mission-control-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mission-control-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .mission-control-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(90deg, rgba(153, 0, 255, 0.2), rgba(102, 0, 204, 0.2));
+            border: 1px solid var(--mission-control-purple);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--mission-control-purple);
+            animation: pulse-purple 2s infinite;
+        }
+
+        @keyframes pulse-purple {
+            0%, 100% { box-shadow: 0 0 10px rgba(153, 0, 255, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(153, 0, 255, 0.5); }
+        }
+
+        .mission-control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .control-room-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(153, 0, 255, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .control-room-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--mission-control-purple);
+            box-shadow: 0 10px 30px rgba(153, 0, 255, 0.2);
+        }
+
+        .control-room-icon {
+            font-size: 3rem;
+            color: var(--mission-control-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Facility Details */
+        .facility-details {
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .facility-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .facility-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        /* Virtual Tour */
+        .virtual-tour {
+            text-align: center;
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 153, 255, 0.1));
+            border-radius: var(--border-radius);
+            border: 1px solid var(--glass-border);
+        }
+
+        .tour-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--space-gray);
+            border-top: 1px solid rgba(0, 102, 204, 0.3);
+            padding: 4rem 20px 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .footer-mission {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .link-column {
+            min-width: 150px;
+        }
+
+        .link-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .address {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .interactive-map {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .spaceport-hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .interactive-map {
+                height: 500px;
+            }
+            
+            .launchpad-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-control-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(10, 10, 26, 0.95);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid var(--glass-border);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .spaceport-hero {
+                padding: 8rem 20px 4rem;
+            }
+            
+            .spaceport-hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .spaceport-hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .interactive-map {
+                height: 400px;
+            }
+            
+            .launchpad, .facility {
+                transform: scale(0.8);
+            }
+            
+            .launchpad:hover, .facility:hover {
+                transform: scale(0.9);
+            }
+            
+            .tour-buttons {
+                flex-direction: column;
+            }
+            
+            .footer-main {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .spaceport-hero-title {
+                font-size: 2rem;
+            }
+            
+            .spaceport-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .interactive-map {
+                height: 300px;
+            }
+            
+            .launchpad-card {
+                padding: 1.5rem;
+            }
+            
+            .virtual-tour {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* Map Popup Information */
+        .map-popup {
+            position: absolute;
+            background: rgba(10, 10, 26, 0.95);
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            width: 300px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            display: none;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .popup-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .popup-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Map Tooltip */
+        .map-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            z-index: 50;
+            pointer-events: none;
+            white-space: nowrap;
+            display: none;
+        }
+
+        /* Coastal Area Animation */
+        .coastal-area {
+            position: absolute;
+            left: 65%;
+            top: 0;
+            bottom: 0;
+            width: 5%;
+            background: linear-gradient(
+                to right,
+                #006633,
+                #009933,
+                #00cc66,
+                #009933,
+                #006633
+            );
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        /* Security Perimeter */
+        .security-perimeter {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 40%;
+            bottom: 5%;
+            border: 2px dashed rgba(255, 255, 0, 0.3);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .perimeter-label {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            color: #ffff00;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Road Network */
+        .road {
+            position: absolute;
+            background: #444444;
+            border-radius: 4px;
+        }
+
+        .road-horizontal {
+            width: 100px;
+            height: 10px;
+        }
+
+        .road-vertical {
+            width: 10px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">SLSEA</span>
+                    <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="Home.html" class="nav-link">Home</a>
+                <a href="missions.html" class="nav-link">Missions</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="spaceport.html" class="nav-link active">Spaceport</a>
+                <a href="training.html" class="nav-link">Cosmonaut Training</a>
+                <a href="partnerships.html" class="nav-link">Partnerships</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Spaceport Hero Section -->
+    <section class="spaceport-hero">
+        <div class="spaceport-hero-badge">South Asia's Premier Space Facility</div>
+        <h1 class="spaceport-hero-title">
+            Batticaloa <span class="gradient-text">Spaceport</span>
+        </h1>
+        <p class="spaceport-hero-subtitle">
+            The largest and most advanced space launch facility in South Asia, strategically located on 
+            Sri Lanka's eastern coast. Featuring 3 specialized launch pads, a 5.2km runway, and world-class 
+            mission control facilities.
+        </p>
+        
+        <div class="spaceport-stats">
+            <div class="spaceport-stat">
+                <div class="spaceport-stat-number">5.2 km</div>
+                <div class="spaceport-stat-label">Longest Runway in Asia</div>
+            </div>
+            <div class="spaceport-stat">
+                <div class="spaceport-stat-number">3</div>
+                <div class="spaceport-stat-label">Specialized Launch Pads</div>
+            </div>
+            <div class="spaceport-stat">
+                <div class="spaceport-stat-number">24/7</div>
+                <div class="spaceport-stat-label">Operations Capability</div>
+            </div>
+            <div class="spaceport-stat">
+                <div class="spaceport-stat-number">300+</div>
+                <div class="spaceport-stat-label">Launch Days Per Year</div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Redesigned Spaceport Layout Section -->
+    <section class="spaceport-layout-section">
+        <div class="layout-container">
+            <div class="layout-header">
+                <div class="layout-badge">Interactive Layout</div>
+                <h2 class="layout-title">Batticaloa <span class="gradient-text">Spaceport Layout</span></h2>
+                <p class="layout-subtitle">
+                    Explore the strategic layout of South Asia's most advanced space launch facility. 
+                    Each component is optimized for maximum efficiency and safety.
+                </p>
+            </div>
+            
+            <!-- Layout Navigation -->
+            <div class="layout-navigation">
+                <button class="nav-btn active" data-section="overview">
+                    <i class="fas fa-map"></i> Overview
+                </button>
+                <button class="nav-btn" data-section="launchpads">
+                    <i class="fas fa-rocket"></i> Launch Pads
+                </button>
+                <button class="nav-btn" data-section="facilities">
+                    <i class="fas fa-building"></i> Facilities
+                </button>
+                <button class="nav-btn" data-section="infrastructure">
+                    <i class="fas fa-road"></i> Infrastructure
+                </button>
+            </div>
+            
+            <!-- Layout Overview -->
+            <div class="layout-section active" id="overview">
+                <div class="overview-container">
+                    <div class="overview-visual">
+                        <!-- Simplified Map -->
+                        <div class="simplified-map">
+                            <!-- Ocean Area -->
+                            <div class="map-ocean">
+                                <div class="ocean-label">Indian Ocean Launch Corridor</div>
+                                <div class="wave-animation"></div>
+                            </div>
+                            
+                            <!-- Coastline -->
+                            <div class="coastline"></div>
+                            
+                            <!-- Runway -->
+                            <div class="map-runway">
+                                <div class="runway-label">Runway 09/27 (5.2 km)</div>
+                                <div class="runway-visual"></div>
+                            </div>
+                            
+                            <!-- Launch Pad Zones -->
+                            <div class="launch-zone alpha-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="zone-label">Alpha Zone</div>
+                            </div>
+                            
+                            <div class="launch-zone beta-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-space-shuttle"></i>
+                                </div>
+                                <div class="zone-label">Beta Zone</div>
+                            </div>
+                            
+                            <div class="launch-zone gamma-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-satellite"></i>
+                                </div>
+                                <div class="zone-label">Gamma Zone</div>
+                            </div>
+                            
+                            <!-- Facility Zones -->
+                            <div class="facility-zone control-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="zone-label">Control Zone</div>
+                            </div>
+                            
+                            <div class="facility-zone assembly-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <div class="zone-label">Assembly Zone</div>
+                            </div>
+                            
+                            <div class="facility-zone support-zone">
+                                <div class="zone-marker">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="zone-label">Support Zone</div>
+                            </div>
+                            
+                            <!-- Security Perimeter -->
+                            <div class="security-perimeter">
+                                <div class="perimeter-dot"></div>
+                                <div class="perimeter-dot"></div>
+                                <div class="perimeter-dot"></div>
+                                <div class="perimeter-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-info">
+                        <div class="info-card">
+                            <h3>Strategic Location</h3>
+                            <p>The spaceport is strategically positioned on Sri Lanka's eastern coast, 
+                            providing optimal launch trajectories over the Indian Ocean.</p>
+                            <div class="info-stats">
+                                <div class="info-stat">
+                                    <div class="stat-value">5.2 km</div>
+                                    <div class="stat-label">Runway Length</div>
+                                </div>
+                                <div class="info-stat">
+                                    <div class="stat-value">800 ha</div>
+                                    <div class="stat-label">Total Area</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>Zone Distribution</h3>
+                            <p>Organized into specialized zones for maximum operational efficiency 
+                            and safety through proper separation of critical functions.</p>
+                            <div class="zone-tags">
+                                <span class="zone-tag launch-zone-tag">Launch Zones</span>
+                                <span class="zone-tag control-zone-tag">Control Zones</span>
+                                <span class="zone-tag support-zone-tag">Support Zones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Launch Pads Layout -->
+            <div class="layout-section" id="launchpads">
+                <div class="launchpads-layout">
+                    <div class="pads-container">
+                        <!-- Alpha Pad -->
+                        <div class="pad-detail alpha-pad">
+                            <div class="pad-header">
+                                <div class="pad-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="pad-title">
+                                    <h3>Launch Pad Alpha</h3>
+                                    <span class="pad-type">Heavy-lift Platform</span>
+                                </div>
+                            </div>
+                            <div class="pad-visual">
+                                <div class="pad-diagram">
+                                    <div class="tower"></div>
+                                    <div class="flame-trench"></div>
+                                    <div class="umbilical-tower"></div>
+                                    <div class="service-structure"></div>
+                                </div>
+                            </div>
+                            <div class="pad-specs">
+                                <div class="spec">
+                                    <span class="spec-name">Tower Height</span>
+                                    <span class="spec-value">120 m</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Payload Capacity</span>
+                                    <span class="spec-value">25,000 kg</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Launch Rate</span>
+                                    <span class="spec-value">4/month</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Beta Pad -->
+                        <div class="pad-detail beta-pad">
+                            <div class="pad-header">
+                                <div class="pad-icon">
+                                    <i class="fas fa-space-shuttle"></i>
+                                </div>
+                                <div class="pad-title">
+                                    <h3>Launch Pad Beta</h3>
+                                    <span class="pad-type">Space Plane Platform</span>
+                                </div>
+                            </div>
+                            <div class="pad-visual">
+                                <div class="pad-diagram">
+                                    <div class="runway-access"></div>
+                                    <div class="integration-hangar"></div>
+                                    <div class="taxiway"></div>
+                                </div>
+                            </div>
+                            <div class="pad-specs">
+                                <div class="spec">
+                                    <span class="spec-name">Integration</span>
+                                    <span class="spec-value">Horizontal</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Turnaround</span>
+                                    <span class="spec-value">48 hours</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Runway Access</span>
+                                    <span class="spec-value">Direct</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gamma Pad -->
+                        <div class="pad-detail gamma-pad">
+                            <div class="pad-header">
+                                <div class="pad-icon">
+                                    <i class="fas fa-satellite"></i>
+                                </div>
+                                <div class="pad-title">
+                                    <h3>Launch Pad Gamma</h3>
+                                    <span class="pad-type">Small Satellite Platform</span>
+                                </div>
+                            </div>
+                            <div class="pad-visual">
+                                <div class="pad-diagram">
+                                    <div class="mobile-platform"></div>
+                                    <div class="quick-integration"></div>
+                                    <div class="automated-systems"></div>
+                                </div>
+                            </div>
+                            <div class="pad-specs">
+                                <div class="spec">
+                                    <span class="spec-name">Automation</span>
+                                    <span class="spec-value">Full</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Launch Rate</span>
+                                    <span class="spec-value">Weekly</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-name">Platform Type</span>
+                                    <span class="spec-value">Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pads-comparison">
+                        <h3>Launch Pad Comparison</h3>
+                        <div class="comparison-table">
+                            <div class="comparison-row header">
+                                <div class="comparison-cell">Feature</div>
+                                <div class="comparison-cell">Alpha</div>
+                                <div class="comparison-cell">Beta</div>
+                                <div class="comparison-cell">Gamma</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell">Primary Use</div>
+                                <div class="comparison-cell">Heavy-lift</div>
+                                <div class="comparison-cell">Space Planes</div>
+                                <div class="comparison-cell">Small Sats</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell">Max Payload</div>
+                                <div class="comparison-cell">25,000 kg</div>
+                                <div class="comparison-cell">12,000 kg</div>
+                                <div class="comparison-cell">3,000 kg</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell">Integration</div>
+                                <div class="comparison-cell">Vertical</div>
+                                <div class="comparison-cell">Horizontal</div>
+                                <div class="comparison-cell">Mobile</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell">Launch Rate</div>
+                                <div class="comparison-cell">4/month</div>
+                                <div class="comparison-cell">8/month</div>
+                                <div class="comparison-cell">Weekly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facilities Layout -->
+            <div class="layout-section" id="facilities">
+                <div class="facilities-layout">
+                    <div class="facilities-grid">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Mission Control</h3>
+                            <p>AI-assisted operations center with triple-redundant systems</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">48 Consoles</span>
+                                <span class="facility-stat">AI Integration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3>Vehicle Assembly</h3>
+                            <p>160m high bay for simultaneous assembly of 3 vehicles</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">3 Bays</span>
+                                <span class="facility-stat">Clean Room</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-gas-pump"></i>
+                            </div>
+                            <h3>Propellant Complex</h3>
+                            <p>40,000-ton cryogenic storage with automated transfer</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">4 Tanks</span>
+                                <span class="facility-stat">Automated</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-satellite"></i>
+                            </div>
+                            <h3>Satellite Prep</h3>
+                            <p>ISO Class 5 clean rooms for payload integration</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">6 Rooms</span>
+                                <span class="facility-stat">ISO 5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                            <h3>Crew Quarters</h3>
+                            <p>Pre-flight accommodations with medical & training facilities</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">20 Suites</span>
+                                <span class="facility-stat">Medical</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Research Center</h3>
+                            <p>Advanced labs for propulsion & materials research</p>
+                            <div class="facility-stats">
+                                <span class="facility-stat">8 Labs</span>
+                                <span class="facility-stat">Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="facilities-flow">
+                        <h3>Operational Flow</h3>
+                        <div class="flow-diagram">
+                            <div class="flow-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Vehicle Assembly</h4>
+                                    <p>Integration in clean room conditions</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Payload Integration</h4>
+                                    <p>Satellite mating and testing</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Launch Pad</h4>
+                                    <p>Transport and erection at pad</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Launch Operations</h4>
+                                    <p>Countdown and mission control</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Infrastructure Layout -->
+            <div class="layout-section" id="infrastructure">
+                <div class="infrastructure-layout">
+                    <div class="infra-grid">
+                        <div class="infra-card">
+                            <div class="infra-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h3>Transport Network</h3>
+                            <p>Dedicated roads connecting all facilities with 4-lane access highway</p>
+                            <ul class="infra-list">
+                                <li>Primary Access Road (4 lanes)</li>
+                                <li>Pad Service Roads (8 km total)</li>
+                                <li>Emergency Vehicle Routes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="infra-card">
+                            <div class="infra-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Power Systems</h3>
+                            <p>Redundant power supply with backup generation capacity</p>
+                            <ul class="infra-list">
+                                <li>Primary Grid (100 MW)</li>
+                                <li>Backup Generators (40 MW)</li>
+                                <li>Solar Array (5 MW)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="infra-card">
+                            <div class="infra-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3>Water Systems</h3>
+                            <p>Dedicated water supply for pad deluge and facility needs</p>
+                            <ul class="infra-list">
+                                <li>Deluge System (1M liters)</li>
+                                <li>Fire Suppression</li>
+                                <li>Potable Water</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="infra-card">
+                            <div class="infra-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Security Systems</h3>
+                            <p>Multi-layered security with advanced monitoring</p>
+                            <ul class="infra-list">
+                                <li>Perimeter Fencing (20 km)</li>
+                                <li>Surveillance Cameras</li>
+                                <li>Biometric Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="infra-visual">
+                        <h3>Infrastructure Map</h3>
+                        <div class="infra-diagram">
+                            <div class="infra-layer power-layer">
+                                <div class="layer-label">Power Grid</div>
+                                <div class="grid-lines"></div>
+                            </div>
+                            <div class="infra-layer road-layer">
+                                <div class="layer-label">Road Network</div>
+                                <div class="road-lines"></div>
+                            </div>
+                            <div class="infra-layer water-layer">
+                                <div class="layer-label">Water Supply</div>
+                                <div class="water-lines"></div>
+                            </div>
+                            <div class="infra-layer comms-layer">
+                                <div class="layer-label">Communications</div>
+                                <div class="comms-nodes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Launch Pad Details -->
+    <section class="launchpad-details">
+        <div class="section-header">
+            <h2 class="section-title">Specialized <span class="gradient-text">Launch Pads</span></h2>
+            <p class="section-subtitle">
+                Three distinct launch pads designed for different mission profiles, 
+                providing unmatched flexibility and operational capability.
+            </p>
+        </div>
+        
+        <div class="launchpad-grid">
+            <!-- Launch Pad Alpha -->
+            <div class="launchpad-card alpha">
+                <div class="launchpad-header">
+                    <div class="launchpad-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="launchpad-info">
+                        <h3>Launch Pad Alpha</h3>
+                        <div class="launchpad-designation">Heavy-lift Vehicle Platform</div>
+                    </div>
+                </div>
+                
+                <div class="launchpad-specs">
+                    <div class="spec-row">
+                        <div class="spec-label">Primary Use</div>
+                        <div class="spec-value">Heavy-lift Orbital Launches</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Max Payload</div>
+                        <div class="spec-value">25,000 kg to LEO</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Tower Height</div>
+                        <div class="spec-value">120 meters</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Flame Trench</div>
+                        <div class="spec-value">40m deep, water-cooled</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Launch Rate</div>
+                        <div class="spec-value">4 launches per month</div>
+                    </div>
+                </div>
+                
+                <p style="color: var(--text-secondary); margin-top: 1.5rem;">
+                    Designed for heavy-lift vehicles up to 5-meter diameter, featuring automatic 
+                    umbilical disconnects, lightning protection, and advanced acoustic suppression.
+                </p>
+            </div>
+            
+            <!-- Launch Pad Beta -->
+            <div class="launchpad-card beta">
+                <div class="launchpad-header">
+                    <div class="launchpad-icon">
+                        <i class="fas fa-space-shuttle"></i>
+                    </div>
+                    <div class="launchpad-info">
+                        <h3>Launch Pad Beta</h3>
+                        <div class="launchpad-designation">Space Plane & Medium-lift Platform</div>
+                    </div>
+                </div>
+                
+                <div class="launchpad-specs">
+                    <div class="spec-row">
+                        <div class="spec-label">Primary Use</div>
+                        <div class="spec-value">Space Planes & Medium Rockets</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Max Payload</div>
+                        <div class="spec-value">12,000 kg to LEO</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Runway Access</div>
+                        <div class="spec-value">Direct taxiway connection</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Processing Time</div>
+                        <div class="spec-value">48-hour turnaround</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Special Features</div>
+                        <div class="spec-value">Horizontal integration facility</div>
+                    </div>
+                </div>
+                
+                <p style="color: var(--text-secondary); margin-top: 1.5rem;">
+                    Optimized for rapid-turnaround space plane operations with integrated maintenance 
+                    hangars and direct runway access for horizontal takeoff and landing.
+                </p>
+            </div>
+            
+            <!-- Launch Pad Gamma -->
+            <div class="launchpad-card gamma">
+                <div class="launchpad-header">
+                    <div class="launchpad-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="launchpad-info">
+                        <h3>Launch Pad Gamma</h3>
+                        <div class="launchpad-designation">Small Satellite & Test Launch Platform</div>
+                    </div>
+                </div>
+                
+                <div class="launchpad-specs">
+                    <div class="spec-row">
+                        <div class="spec-label">Primary Use</div>
+                        <div class="spec-value">Small Satellites & Test Launches</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Max Payload</div>
+                        <div class="spec-value">3,000 kg to LEO</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Launch Frequency</div>
+                        <div class="spec-value">Weekly launch capability</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Automation Level</div>
+                        <div class="spec-value">Fully automated operations</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">Special Features</div>
+                        <div class="spec-value">Mobile launch platform</div>
+                    </div>
+                </div>
+                
+                <p style="color: var(--text-secondary); margin-top: 1.5rem;">
+                    Dedicated to small satellite constellations and technology demonstrators with 
+                    rapid integration capabilities and fully automated countdown sequences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Control Section - HYPE -->
+    <section class="mission-control-section">
+        <div class="mission-control-container">
+            <div class="mission-control-header">
+                <div class="mission-control-badge">World's Most Advanced</div>
+                <h2 class="section-title">Mission <span style="color: var(--mission-control-purple);">Control Center</span></h2>
+                <p class="section-subtitle">
+                    SLSEA's Mission Control is a technological marvel featuring redundant systems, 
+                    AI-assisted operations, and global network connectivity for 24/7 mission oversight.
+                </p>
+            </div>
+            
+            <div class="mission-control-grid">
+                <div class="control-room-card">
+                    <div class="control-room-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Assisted Operations</h3>
+                    <p>Neural network systems provide real-time anomaly detection and decision support for mission controllers.</p>
+                </div>
+                
+                <div class="control-room-card">
+                    <div class="control-room-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Redundant Systems</h3>
+                    <p>Triple-redundant communication, power, and computing systems ensure uninterrupted mission control.</p>
+                </div>
+                
+                <div class="control-room-card">
+                    <div class="control-room-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Network</h3>
+                    <p>Connected to 12 international tracking stations and partner agency control centers worldwide.</p>
+                </div>
+                
+                <div class="control-room-card">
+                    <div class="control-room-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VR Mission Visualization</h3>
+                    <p>Immersive virtual reality systems for 3D mission visualization and anomaly investigation.</p>
+                </div>
+            </div>
+            
+            <!-- Control Room Details -->
+            <div class="facility-details">
+                <h3 class="section-title" style="text-align: center; margin-bottom: 3rem;">Control Room <span class="gradient-text">Specifications</span></h3>
+                
+                <div class="facility-grid">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Main Control Room</h3>
+                        <p>48 console positions with 8K displays, redundant workstations, and AI-assisted decision support systems.</p>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h3>Communications Hub</h3>
+                        <p>Secure encrypted links to spacecraft, tracking stations, and international partners with 99.999% uptime.</p>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security & Redundancy</h3>
+                        <p>Underground backup control center, EMP-protected systems, and biometric access control throughout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Facilities -->
+    <section class="facility-details">
+        <div class="section-header">
+            <h2 class="section-title">Support <span class="gradient-text">Facilities</span></h2>
+            <p class="section-subtitle">
+                Comprehensive infrastructure supporting every aspect of spaceport operations, 
+                from vehicle assembly to crew accommodations.
+            </p>
+        </div>
+        
+        <div class="facility-grid">
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Vehicle Assembly Building</h3>
+                <p>160-meter high bay for simultaneous assembly of 3 heavy-lift vehicles with clean room conditions.</p>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-gas-pump"></i>
+                </div>
+                <h3>Propellant Storage Complex</h3>
+                <p>40,000-ton cryogenic storage capacity for liquid hydrogen, oxygen, and methane with automated transfer systems.</p>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h3>Satellite Processing Facility</h3>
+                <p>ISO Class 5 clean rooms for satellite integration, testing, and fueling with vibration isolation systems.</p>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <h3>Cosmonaut Training Center</h3>
+                <p>Full-scale simulators, medical facilities, and mission-specific training environments for crew preparation.</p>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Space Research Center</h3>
+                <p>Advanced laboratories for materials science, propulsion research, and space technology development.</p>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">
+                    <i class="fas fa-helicopter"></i>
+                </div>
+                <h3>Emergency Response</h3>
+                <p>Dedicated fire station, medical center, and search & rescue teams with 60-second response time to any pad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour -->
+    <section class="virtual-tour">
+        <h2 class="section-title">Experience <span class="gradient-text">Batticaloa Spaceport</span></h2>
+        <p class="section-subtitle">
+            Take a virtual tour of South Asia's most advanced space launch facility. 
+            Explore launch pads, mission control, and support facilities from anywhere in the world.
+        </p>
+        
+        <div class="tour-buttons">
+            <a href="#" class="cta-button primary large">
+                <i class="fas fa-vr-cardboard"></i> Start Virtual Tour
+            </a>
+            <a href="#" class="cta-button secondary">
+                <i class="fas fa-calendar"></i> Schedule In-Person Visit
+            </a>
+            <a href="#" class="cta-button secondary">
+                <i class="fas fa-download"></i> Download Visitor Guide
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">SLSEA</span>
+                            <span class="logo-sub">SRI LANKAN SPACE EXPLORATION AGENCY</span>
+                        </div>
+                    </a>
+                    <p class="footer-mission">
+                        Operating South Asia's premier space launch facility from the 
+                        strategic coastal location of Batticaloa, Sri Lanka.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4 class="link-title">Spaceport</h4>
+                        <a href="#" class="footer-link">Launch Schedule</a>
+                        <a href="#" class="footer-link">Visitor Information</a>
+                        <a href="#" class="footer-link">Facility Tours</a>
+                        <a href="#" class="footer-link">Media Gallery</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Operations</h4>
+                        <a href="#" class="footer-link">Launch Services</a>
+                        <a href="#" class="footer-link">Payload Integration</a>
+                        <a href="#" class="footer-link">Range Safety</a>
+                        <a href="#" class="footer-link">Weather Monitoring</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4 class="link-title">Partners</h4>
+                        <a href="#" class="footer-link">Commercial Launch</a>
+                        <a href="#" class="footer-link">Government Missions</a>
+                        <a href="#" class="footer-link">Research Collaboration</a>
+                        <a href="#" class="footer-link">Educational Programs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p class="address">
+                        <i class="fas fa-map-marker-alt"></i> Batticaloa Spaceport, Reclaimed Land Area, Eastern Province, Sri Lanka
+                    </p>
+                    <p class="copyright">
+                        &copy; <span id="currentYear"></span> Sri Lankan Space Exploration Agency. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Map Popup Templates (hidden) -->
+    <div id="facilityTemplates" style="display: none;">
+        <!-- Launch Pad Alpha Template -->
+        <div id="template-alpha">
+            <div class="popup-header">
+                <div class="popup-icon" style="background: linear-gradient(135deg, #ff3333, #ff6666);">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="popup-title">Launch Pad Alpha</div>
+            </div>
+            <div class="popup-content">
+                <p><strong>Primary Function:</strong> Heavy-lift orbital launches</p>
+                <p><strong>Max Payload:</strong> 25,000 kg to LEO</p>
+                <p><strong>Tower Height:</strong> 120 meters</p>
+                <p><strong>Special Features:</strong> Water-cooled flame trench, automatic umbilical disconnects</p>
+                <p><strong>Launch Capacity:</strong> 4 launches per month</p>
+            </div>
+        </div>
+        
+        <!-- Launch Pad Beta Template -->
+        <div id="template-beta">
+            <div class="popup-header">
+                <div class="popup-icon" style="background: linear-gradient(135deg, #ff9900, #ffcc00);">
+                    <i class="fas fa-space-shuttle"></i>
+                </div>
+                <div class="popup-title">Launch Pad Beta</div>
+            </div>
+            <div class="popup-content">
+                <p><strong>Primary Function:</strong> Space planes & medium rockets</p>
+                <p><strong>Max Payload:</strong> 12,000 kg to LEO</p>
+                <p><strong>Special Features:</strong> Direct runway access, horizontal integration</p>
+                <p><strong>Turnaround Time:</strong> 48 hours between launches</p>
+                <p><strong>Unique Capability:</strong> Space plane horizontal takeoff/landing</p>
+            </div>
+        </div>
+        
+        <!-- Launch Pad Gamma Template -->
+        <div id="template-gamma">
+            <div class="popup-header">
+                <div class="popup-icon" style="background: linear-gradient(135deg, #00cc66, #00ff99);">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <div class="popup-title">Launch Pad Gamma</div>
+            </div>
+            <div class="popup-content">
+                <p><strong>Primary Function:</strong> Small satellites & test launches</p>
+                <p><strong>Max Payload:</strong> 3,000 kg to LEO</p>
+                <p><strong>Launch Frequency:</strong> Weekly capability</p>
+                <p><strong>Automation:</strong> Fully automated operations</p>
+                <p><strong>Special Feature:</strong> Mobile launch platform</p>
+            </div>
+        </div>
+        
+        <!-- Mission Control Template -->
+        <div id="template-mission-control">
+            <div class="popup-header">
+                <div class="popup-icon" style="background: linear-gradient(135deg, var(--mission-control-purple), #cc66ff);">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div class="popup-title">Mission Control Center</div>
+            </div>
+            <div class="popup-content">
+                <p><strong>Function:</strong> Primary mission command & control</p>
+                <p><strong>Consoles:</strong> 48 controller positions</p>
+                <p><strong>Technology:</strong> AI-assisted operations, VR visualization</p>
+                <p><strong>Redundancy:</strong> Triple-redundant systems</p>
+                <p><strong>Global Network:</strong> Connected to 12 tracking stations</p>
+            </div>
+        </div>
+        
+        <!-- Vehicle Assembly Template -->
+        <div id="template-vehicle-assembly">
+            <div class="popup-header">
+                <div class="popup-icon" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="popup-title">Vehicle Assembly Building</div>
+            </div>
+            <div class="popup-content">
+                <p><strong>Size:</strong> 160 meters height, 3 assembly bays</p>
+                <p><strong>Capacity:</strong> 3 heavy-lift vehicles simultaneously</p>
+                <p><strong>Clean Room:</strong> ISO Class 8 conditions</p>
+                <p><strong>Cranes:</strong> 4 x 250-ton overhead cranes</p>
+                <p><strong>Special:</strong> Horizontal and vertical integration capability</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Spaceport Page
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.padding = '0.7rem 0';
+                    navbar.style.backdropFilter = 'blur(20px)';
+                } else {
+                    navbar.style.padding = '1rem 0';
+                    navbar.style.backdropFilter = 'blur(15px)';
+                }
+            });
+            
+            // Interactive Map Functionality
+            const spaceportMap = document.getElementById('spaceportMap');
+            const mapTooltip = document.getElementById('mapTooltip');
+            const mapPopup = document.getElementById('mapPopup');
+            const popupClose = document.getElementById('popupClose');
+            
+            // Facility data for tooltips and popups
+            const facilities = {
+                'alpha': {
+                    name: 'Launch Pad Alpha',
+                    description: 'Heavy-lift vehicle platform for orbital launches',
+                    icon: 'fa-rocket',
+                    color: '#ff3333'
+                },
+                'beta': {
+                    name: 'Launch Pad Beta',
+                    description: 'Space plane & medium-lift launch platform',
+                    icon: 'fa-space-shuttle',
+                    color: '#ff9900'
+                },
+                'gamma': {
+                    name: 'Launch Pad Gamma',
+                    description: 'Small satellite & test launch platform',
+                    icon: 'fa-satellite',
+                    color: '#00cc66'
+                },
+                'mission-control': {
+                    name: 'Mission Control Center',
+                    description: 'Primary command & control for all spaceport operations',
+                    icon: 'fa-desktop',
+                    color: '#9900ff'
+                },
+                'vehicle-assembly': {
+                    name: 'Vehicle Assembly Building',
+                    description: 'Integration facility for rockets and space vehicles',
+                    icon: 'fa-industry',
+                    color: '#0066cc'
+                },
+                'propellant-storage': {
+                    name: 'Propellant Storage Complex',
+                    description: 'Cryogenic storage for launch vehicle fuels',
+                    icon: 'fa-gas-pump',
+                    color: '#0066cc'
+                },
+                'satellite-prep': {
+                    name: 'Satellite Processing Facility',
+                    description: 'Clean room for satellite integration and testing',
+                    icon: 'fa-satellite-dish',
+                    color: '#0066cc'
+                },
+                'cosmonaut-quarters': {
+                    name: 'Cosmonaut Quarters',
+                    description: 'Crew accommodations and pre-flight facilities',
+                    icon: 'fa-user-astronaut',
+                    color: '#0066cc'
+                },
+                'research-center': {
+                    name: 'Space Research Center',
+                    description: 'Advanced laboratories for space technology research',
+                    icon: 'fa-flask',
+                    color: '#0066cc'
+                }
+            };
+            
+            // Show tooltip on hover
+            const mapElements = document.querySelectorAll('.launchpad, .facility');
+            mapElements.forEach(element => {
+                const facilityId = element.getAttribute('data-facility');
+                const facility = facilities[facilityId];
+                
+                element.addEventListener('mouseenter', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const mapRect = spaceportMap.getBoundingClientRect();
+                    
+                    // Position tooltip
+                    mapTooltip.textContent = facility.name;
+                    mapTooltip.style.left = (rect.left - mapRect.left + rect.width/2) + 'px';
+                    mapTooltip.style.top = (rect.top - mapRect.top - 40) + 'px';
+                    mapTooltip.style.display = 'block';
+                    
+                    // Add highlight effect
+                    this.style.zIndex = '20';
+                    if (this.classList.contains('launchpad')) {
+                        const marker = this.querySelector('.launchpad-marker');
+                        marker.style.transform = 'scale(1.2)';
+                        marker.style.boxShadow = `0 0 40px ${facility.color}`;
+                    }
+                });
+                
+                element.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const mapRect = spaceportMap.getBoundingClientRect();
+                    mapTooltip.style.left = (rect.left - mapRect.left + rect.width/2) + 'px';
+                    mapTooltip.style.top = (rect.top - mapRect.top - 40) + 'px';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    mapTooltip.style.display = 'none';
+                    this.style.zIndex = '';
+                    if (this.classList.contains('launchpad')) {
+                        const marker = this.querySelector('.launchpad-marker');
+                        marker.style.transform = '';
+                        marker.style.boxShadow = '';
+                    }
+                });
+                
+                // Show popup on click
+                element.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Position popup near the element
+                    const rect = this.getBoundingClientRect();
+                    const mapRect = spaceportMap.getBoundingClientRect();
+                    
+                    let popupX = rect.left - mapRect.left + rect.width/2;
+                    let popupY = rect.top - mapRect.top + rect.height;
+                    
+                    // Adjust if near edges
+                    if (popupX > mapRect.width - 300) popupX = mapRect.width - 320;
+                    if (popupX < 20) popupX = 20;
+                    if (popupY > mapRect.height - 200) popupY = rect.top - mapRect.top - 220;
+                    
+                    mapPopup.style.left = popupX + 'px';
+                    mapPopup.style.top = popupY + 'px';
+                    
+                    // Load template content
+                    const template = document.getElementById(`template-${facilityId}`);
+                    if (template) {
+                        document.getElementById('popupIcon').innerHTML = template.querySelector('.popup-icon').innerHTML;
+                        document.getElementById('popupTitle').textContent = template.querySelector('.popup-title').textContent;
+                        document.getElementById('popupContent').innerHTML = template.querySelector('.popup-content').innerHTML;
+                    } else {
+                        // Fallback content
+                        document.getElementById('popupIcon').innerHTML = `<i class="fas ${facility.icon}"></i>`;
+                        document.getElementById('popupTitle').textContent = facility.name;
+                        document.getElementById('popupContent').innerHTML = `<p>${facility.description}</p>`;
+                    }
+                    
+                    mapPopup.style.display = 'block';
+                });
+            });
+            
+            // Close popup when close button is clicked
+            popupClose.addEventListener('click', function() {
+                mapPopup.style.display = 'none';
+            });
+            
+            // Close popup when clicking outside
+            spaceportMap.addEventListener('click', function(e) {
+                if (!mapPopup.contains(e.target) && !e.target.closest('.launchpad, .facility')) {
+                    mapPopup.style.display = 'none';
+                }
+            });
+            
+            // Launch pad card hover effects
+            const launchpadCards = document.querySelectorAll('.launchpad-card');
+            launchpadCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    const type = this.classList.contains('alpha') ? 'alpha' : 
+                                 this.classList.contains('beta') ? 'beta' : 'gamma';
+                    
+                    // Highlight corresponding map element
+                    const mapElement = document.querySelector(`.launchpad-${type}`);
+                    if (mapElement) {
+                        mapElement.style.zIndex = '30';
+                        const marker = mapElement.querySelector('.launchpad-marker');
+                        marker.style.transform = 'scale(1.3)';
+                        marker.style.boxShadow = '0 0 50px currentColor';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    const type = this.classList.contains('alpha') ? 'alpha' : 
+                                 this.classList.contains('beta') ? 'beta' : 'gamma';
+                    
+                    // Reset map element
+                    const mapElement = document.querySelector(`.launchpad-${type}`);
+                    if (mapElement) {
+                        mapElement.style.zIndex = '';
+                        const marker = mapElement.querySelector('.launchpad-marker');
+                        marker.style.transform = '';
+                        marker.style.boxShadow = '';
+                    }
+                });
+            });
+            
+            // Mission control badge animation
+            const missionControlBadge = document.querySelector('.mission-control-badge');
+            setInterval(() => {
+                missionControlBadge.style.animation = 'none';
+                setTimeout(() => {
+                    missionControlBadge.style.animation = '';
+                }, 10);
+            }, 4000);
+            
+            // Wave animation synchronization
+            const waves = document.querySelectorAll('.wave');
+            waves.forEach((wave, index) => {
+                wave.style.animationDelay = `${index * 2}s`;
+            });
+            
+            // Launch pad marker pulse synchronization
+            const launchpadMarkers = document.querySelectorAll('.launchpad-marker');
+            launchpadMarkers.forEach((marker, index) => {
+                marker.style.animationDelay = `${index * 0.5}s`;
+            });
+            
+            // Parallax effect for ocean waves on scroll
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const waves = document.querySelectorAll('.wave');
+                
+                waves.forEach((wave, index) => {
+                    const speed = 0.05 + (index * 0.02);
+                    wave.style.transform = `translateX(${scrolled * speed}px)`;
+                });
+            });
+            
+            // Virtual tour button effects
+            const tourButtons = document.querySelectorAll('.tour-buttons .cta-button');
+            tourButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Security perimeter animation
+            const securityPerimeter = document.querySelector('.security-perimeter');
+            setInterval(() => {
+                const dashOffset = parseFloat(getComputedStyle(securityPerimeter).getPropertyValue('stroke-dashoffset')) || 0;
+                securityPerimeter.style.strokeDashoffset = (dashOffset - 1) + 'px';
+            }, 50);
+            
+            // Simulate activity on launch pads
+            function simulatePadActivity() {
+                const pads = document.querySelectorAll('.launchpad-marker');
+                pads.forEach((pad, index) => {
+                    setTimeout(() => {
+                        pad.style.animation = 'none';
+                        setTimeout(() => {
+                            pad.style.animation = 'pulse 2s infinite';
+                        }, 100);
+                    }, index * 3000);
+                });
+            }
+            
+            // Start simulation
+            simulatePadActivity();
+            setInterval(simulatePadActivity, 9000);
+            
+            // Interactive runway effects
+            const runway = document.querySelector('.runway-main');
+            runway.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 40px rgba(0, 255, 0, 0.5)';
+                const centerline = this.querySelector('.runway-centerline');
+                centerline.style.animation = 'moveCenterline 2s linear infinite';
+            });
+            
+            runway.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.1)';
+                const centerline = this.querySelector('.runway-centerline');
+                centerline.style.animation = '';
+            });
+            
+            // Add centerline animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes moveCenterline {
+                    0% { background-position: 0 0; }
+                    100% { background-position: 80px 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Ocean sound simulation on hover
+            const oceanArea = document.querySelector('.ocean-area');
+            oceanArea.addEventListener('mouseenter', function() {
+                const waves = this.querySelectorAll('.wave');
+                waves.forEach(wave => {
+                    wave.style.animationDuration = '2s';
+                });
+            });
+            
+            oceanArea.addEventListener('mouseleave', function() {
+                const waves = this.querySelectorAll('.wave');
+                waves.forEach(wave => {
+                    wave.style.animationDuration = '4s';
+                });
+            });
+        });
+        
+        // Additional animations for page load
+        window.addEventListener('load', function() {
+            // Animate stats counting up
+            const statNumbers = document.querySelectorAll('.spaceport-stat-number');
+            statNumbers.forEach(stat => {
+                const finalValue = parseInt(stat.textContent);
+                let currentValue = 0;
+                const increment = finalValue / 50;
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= finalValue) {
+                        stat.textContent = finalValue;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(currentValue);
+                    }
+                }, 30);
+            });
+            
+            // Animate map elements sequentially
+            const mapElements = document.querySelectorAll('.launchpad, .facility');
+            mapElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'scale(0.5)';
+                    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'scale(1)';
+                    }, 100);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
